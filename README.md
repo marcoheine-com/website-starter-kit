@@ -13,12 +13,12 @@ This repository aims to be a **kickstart** for every new project because the too
 
 ![image of several tools](/public/wip.png)
 
-## How do set it up
+## How to set it up
 
 Clone the repository:
 
 ```bash
-git clone github.com/mkuehb/ <YOUR_PROJECT_NAME>
+git clone git@github.com:mkuehb/website-starter-kit.git <YOUR_PROJECT_NAME>
 ```
 
 Install the dependencies:
@@ -45,7 +45,7 @@ Now your website runs on [localhost:3000](http://localhost:3000). You can start 
 ### NextJS with TypeScript
 
 NextJS in combination with TypeScript is used to pre-render all pages on the server. You can learn more about
-it [here:](https://nextjs.org/docs/basic-features/pages#static-generation-recommended).
+it [here](https://nextjs.org/docs/basic-features/pages#static-generation-recommended).
 
 ### TailwindCSS
 
@@ -89,3 +89,7 @@ npm run slicemachine
 Now the slicemachine runs on: [localhost:9999](http://localhost:9999).
 
 ### Linting with eslint and prettier
+
+No one wants to manually format code. Also basic linting can prevent bugs in the first place. So I've added
+eslint together with prettier to make sure that everything is formatted the same and to avoid traditional
+variable renaming errors.
