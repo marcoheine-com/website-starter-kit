@@ -1,34 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# website starter kit 🚀
 
-## Getting Started
+## What is this?
 
-First, run the development server:
+This repository contains the **basic code** to start a **modern website** with a **headless CMS** integration.
+
+It has all the important dependencies and tools to get your website up and running.
+
+As a [front-end freelancer](https://marcokuehbauch.com/work/) I've started all my new projects by setting up
+the same tools and packages over and over again.
+
+This repository aims to be a **kickstart** for every new project because the tooling is already done.
+
+![image of several tools](/public/wip.png)
+
+## How do set it up
+
+Clone the repository:
+
+```bash
+git clone github.com/mkuehb/ <YOUR_PROJECT_NAME>
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Replace the `apiEndpoint` field with your Prismic repository URL in the [sm.json](sm.json) file. Everything
+else is already setup for using all the great prismic features, like the preview mode, link and route
+resolvers, etc.
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now your website runs on [localhost:3000](http://localhost:3000). You can start building the front-end or
+[model the content](#prismic-custom-types-and-slices).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## The main parts
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### NextJS with TypeScript
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+NextJS in combination with TypeScript is used to pre-render all pages on the server. You can learn more about
+it [here:](https://nextjs.org/docs/basic-features/pages#static-generation-recommended).
 
-## Learn More
+### TailwindCSS
 
-To learn more about Next.js, take a look at the following resources:
+TailwindCSS is used for styling. I've used styled-components for a long time and then decided to give Tailwind
+a shot. And the improvement concerning speed was worth the switch.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Also the [documentation](https://tailwindcss.com/docs/installation) is just incredible. You can hit `cmd` +
+`k` anywhere to search for CSS attributes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Prismic
 
-## Deploy on Vercel
+As a headless CMS, I've made good experiences with Prismic. It brings a lot of flexibility to model your
+content with it's system of **custom types** and **resusable slices**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Prismic Custom Types and Slices
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Prismic uses [custom types](https://prismic.io/docs/core-concepts/custom-types) and
+[slices](https://prismic.io/docs/core-concepts/slices) to model the content of a page.
+
+This website starter kit already has some **pre-built** custom types and slices that are most commonly used on
+websites.
+
+**Slices**
+
+| Name      | None Repeatable Fields | Repeatable Fields | Variation |
+| --------- | ---------------------- | ----------------- | --------- |
+| TextImage |                        |                   | default   |
+
+**Custom Types**
+
+| Name   | Type   | Fields | Slices |
+| ------ | ------ | ------ | ------ |
+| Header | single |        |
+
+To edit them, or add new ones, use the [Slice Machine](https://prismic.io/docs/core-concepts/slice-machine)
+
+```bash
+npm run slicemachine
+```
+
+Now the slicemachine runs on: [localhost:9999](http://localhost:9999).
+
+### Linting with eslint and prettier
