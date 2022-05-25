@@ -1,0 +1,48 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "copyRight": {
+        "type": "Text",
+        "config": {
+          "label": "Copy Right",
+          "placeholder": ""
+        }
+      },
+      "socialLinks": {
+        "type": "Group",
+        "config": {
+          "label": "Social Links",
+          "fields": {
+            "socialLink": {
+              "type": "Link",
+              "config": {
+                "label": "Social Link",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "socialLinkLabel": {
+              "type": "Text",
+              "config": {
+                "label": "Social Link Label",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

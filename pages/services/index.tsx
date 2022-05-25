@@ -1,14 +1,14 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { ImageProps } from '../entities'
-import { createClient } from '../prismicio'
+import { ImageProps } from '../../entities'
+import { createClient } from '../../prismicio'
 
 // NOTE: You have to create your first prismic document to make this work
 // export const getStaticProps: GetStaticProps = async ({ previewData }) => {
 //   const client = createClient(previewData)
 
-//   const doc = (await client.getSingle('index', {})) || null
+//   const doc = (await client.getSingle('services-distribution', {})) || null
 //   const header = (await client.getSingle('header', {})) || null
 //   const footer = (await client.getSingle('footer', {})) || null
 
@@ -40,8 +40,8 @@ const Home: NextPage<PageProps> = ({ doc }) => {
       </Head>
 
       <main className="flex flex-col items-center py-1 px-4 mx-auto mt-10 max-w-4xl">
-        <h1>Website Starter Kit</h1>
-        <p>Edit the index.tsx to change the content of this page.</p>
+        <h1>Services</h1>
+        <p>Edit the index.tsx /pages/services to change the content of this page.</p>
         <Image src="/wip.png" alt="Website Starter Kit" width={600} height={600} />
       </main>
     </div>

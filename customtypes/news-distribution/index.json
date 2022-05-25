@@ -1,0 +1,39 @@
+{
+  "id": "news-distribution",
+  "label": "News Distribution",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        }
+      },
+      "metaTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": ""
+        }
+      },
+      "metaDescription": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": ""
+        }
+      },
+      "thumbnail": {
+        "type": "Image",
+        "config": {
+          "label": "Thumbnail",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

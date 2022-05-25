@@ -1,0 +1,18 @@
+{
+  "id": "form",
+  "label": "form",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "formspreeLink": {
+        "type": "Link",
+        "config": {
+          "label": "Formspree Link",
+          "placeholder": "",
+          "select": null
+        }
+      }
+    }
+  }
+}

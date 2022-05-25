@@ -1,5 +1,7 @@
 # website starter kit 🚀
 
+![image of several tools](/public/wip.png)
+
 ## What is this?
 
 This repository contains the **basic code** to start a **modern website** with a **headless CMS** integration.
@@ -10,8 +12,6 @@ As a [front-end freelancer](https://marcokuehbauch.com/work/) I've started all m
 the same tools and packages over and over again.
 
 This repository aims to be a **kickstart** for every new project because the tooling is already done.
-
-![image of several tools](/public/wip.png)
 
 ## How to set it up
 
@@ -76,8 +76,8 @@ websites.
 
 **Custom Types**
 
-| Name   | Type   | Fields | Slices |
-| ------ | ------ | ------ | ------ |
+| Name   | Type   | Fields | Available Slices |
+| ------ | ------ | ------ | ---------------- |
 | Header | single |        |
 
 To edit them, or add new ones, use the [Slice Machine](https://prismic.io/docs/core-concepts/slice-machine)

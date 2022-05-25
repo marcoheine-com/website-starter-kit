@@ -1,0 +1,61 @@
+{
+  "id": "288dab8d-cadb-45bd-8b4a-f5d0fdd2d5f0",
+  "uid": "autem-at-quod",
+  "type": "footer",
+  "data": {
+    "logo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+    },
+    "copyRight": "enable 24/7 models",
+    "socialLinks": [
+      {
+        "socialLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "socialLinkLabel": "orchestrate collaborative niches"
+      },
+      {
+        "socialLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "socialLinkLabel": "exploit B2C partnerships"
+      },
+      {
+        "socialLink": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "socialLinkLabel": "e-enable viral portals"
+      },
+      {
+        "socialLink": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "socialLinkLabel": "incentivize 24/365 channels"
+      },
+      {
+        "socialLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "socialLinkLabel": "repurpose cross-platform markets"
+      },
+      {
+        "socialLink": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "socialLinkLabel": "integrate mission-critical experiences"
+      }
+    ]
+  }
+}
