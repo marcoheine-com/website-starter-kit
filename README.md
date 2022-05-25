@@ -68,17 +68,14 @@ Prismic uses [custom types](https://prismic.io/docs/core-concepts/custom-types) 
 This website starter kit already has some **pre-built** custom types and slices that are most commonly used on
 websites.
 
-**Slices**
+#### Slices
 
-| Name      | None Repeatable Fields | Repeatable Fields | Variation |
-| --------- | ---------------------- | ----------------- | --------- |
-| TextImage |                        |                   | default   |
+Card, Form, Image, InfoBox, Partner, Quote, Stage, Text, TextImage, Video
 
-**Custom Types**
+#### Custom Types
 
-| Name   | Type   | Fields | Available Slices |
-| ------ | ------ | ------ | ---------------- |
-| Header | single |        |
+Index Page, Content Page, Services Page, Service Detail Page, News Page, News Detail Page, Cases Page, Header,
+Footer, Form, Case Modal, Service Filter Item
 
 To edit them, or add new ones, use the [Slice Machine](https://prismic.io/docs/core-concepts/slice-machine)
 

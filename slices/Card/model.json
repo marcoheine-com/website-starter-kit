@@ -1,0 +1,213 @@
+{
+  "id": "card",
+  "type": "SharedSlice",
+  "name": "Card",
+  "description": "Card",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Card",
+      "primary": {
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "layout": {
+          "type": "Select",
+          "config": {
+            "label": "Layout",
+            "placeholder": "",
+            "options": [
+              "two-column",
+              "three-column"
+            ]
+          }
+        },
+        "backgroundColor": {
+          "type": "Boolean",
+          "config": {
+            "label": "Background Color",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        }
+      },
+      "items": {
+        "asset": {
+          "type": "Image",
+          "config": {
+            "label": "Asset",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "linkLabel": {
+          "type": "Text",
+          "config": {
+            "label": "Link Label",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "itemAsLinkToServices",
+      "name": "item as link to services",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Card",
+      "primary": {
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "layout": {
+          "type": "Select",
+          "config": {
+            "label": "Layout",
+            "placeholder": "",
+            "options": [
+              "two-column",
+              "three-column"
+            ]
+          }
+        },
+        "backgroundColor": {
+          "type": "Boolean",
+          "config": {
+            "label": "Background Color",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        }
+      },
+      "items": {
+        "linkToPage": {
+          "type": "Link",
+          "config": {
+            "label": "Link To Page",
+            "select": "document",
+            "customtypes": [
+              "services-distribution"
+            ]
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "icon",
+      "name": "icon",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Card",
+      "primary": {
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "layout": {
+          "type": "Select",
+          "config": {
+            "label": "Layout",
+            "placeholder": "",
+            "options": [
+              "two-column",
+              "three-column"
+            ]
+          }
+        },
+        "backgroundColor": {
+          "type": "Boolean",
+          "config": {
+            "label": "Background Color",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        }
+      },
+      "items": {
+        "asset": {
+          "type": "Image",
+          "config": {
+            "label": "Asset",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "backgroundAsset": {
+          "type": "Link",
+          "config": {
+            "label": "Background Asset",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "linkLabel": {
+          "type": "Text",
+          "config": {
+            "label": "Link Label",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

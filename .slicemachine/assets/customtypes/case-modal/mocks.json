@@ -1,0 +1,102 @@
+{
+  "id": "848ad8bd-dec4-4d7e-bcc7-ec00be21e7c6",
+  "uid": "qui-eos-quo",
+  "type": "case-modal",
+  "data": {
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop"
+    },
+    "thumbnailRatio": "1:1",
+    "title": "integrate seamless initiatives",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Aliqua laborum sunt labore voluptate et. Irure cupidatat anim sunt exercitation.",
+        "spans": []
+      }
+    ],
+    "serviceFilterItem": [
+      {
+        "serviceFilter": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "serviceFilter": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "serviceFilter": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      }
+    ],
+    "caseImage": [
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=900&h=500&fit=crop"
+        }
+      }
+    ]
+  }
+}

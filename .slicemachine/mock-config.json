@@ -9,6 +9,79 @@
     "cases-distribution": {},
     "services-distribution": {},
     "service-detail": {},
-    "content-page": {}
+    "content-page": {},
+    "case-modal": {
+      "serviceFilterItem": {}
+    },
+    "service-filter-item": {}
+  },
+  "slices": {
+    "Text": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Stage": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Infobox": {
+      "default": {
+        "primary": {}
+      },
+      "socialMedia": {
+        "primary": {}
+      }
+    },
+    "TextImage": {
+      "default": {
+        "primary": {}
+      },
+      "itemAsLinkToServices": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Card": {
+      "default": {
+        "primary": {}
+      },
+      "itemAsLinkToServices": {
+        "items": {},
+        "primary": {}
+      },
+      "icon": {
+        "primary": {}
+      }
+    },
+    "Form": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Image": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Video": {
+      "default": {
+        "primary": {}
+      },
+      "youtubeLink": {
+        "primary": {}
+      }
+    },
+    "Quote": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Partner": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }
