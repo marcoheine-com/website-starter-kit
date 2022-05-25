@@ -20,6 +20,47 @@
           "placeholder": ""
         }
       },
+      "contentColOne": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Content Col One",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "contentColTwo": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Content Col Two",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "navItems": {
+        "type": "Group",
+        "config": {
+          "label": "Nav Items",
+          "fields": {
+            "navLink": {
+              "type": "Link",
+              "config": {
+                "label": "Nav Link",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "navLinkLabel": {
+              "type": "Text",
+              "config": {
+                "label": "Nav Linklabel",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
       "socialLinks": {
         "type": "Group",
         "config": {

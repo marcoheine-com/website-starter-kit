@@ -6,7 +6,46 @@
   h1 {
     @apply text-4xl font-bold;
   }
+
+  p {
+    @apply text-base leading-[1.8] 960:text-lg 960:leading-[1.8] 1920:text-lg 1920:leading-[1.8];
+  }
+
+  h1 {
+    @apply text-[2.5rem] leading-[1.15] 960:text-[3.5rem] mb-8;
+  }
+
+  h2,
+  h4,
+  h3,
+  h5,
+  h6 {
+    @apply leading-[1.25] mb-6;
+  }
+
+  h2 {
+    @apply text-[2rem] 960:text-[3rem];
+  }
+
+  h3 {
+    @apply text-[1.5rem] 960:text-[2.5rem];
+  }
+
+  h4 {
+    @apply text-[1.25rem] 960:text-[2rem];
+  }
+
+  h5 {
+    @apply text-[1rem] 960:text-[1.5rem];
+  }
 }
 
 @layer utilities {
+  .main-layout {
+    @apply flex flex-col items-center max-w-container-full mx-auto;
+  }
+
+  .padding-x {
+    @apply px-8 768:px-16 960:px-20 1200:px-24 1400:px-32;
+  }
 }

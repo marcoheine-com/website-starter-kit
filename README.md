@@ -1,6 +1,6 @@
 # website starter kit 🚀
 
-![image of several tools](/public/wip.png)
+![image of several tools](/public/wip.png) [illustration by Laura Heine](https://lauraheine.com)
 
 ## What is this?
 

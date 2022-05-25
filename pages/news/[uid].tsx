@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { ImageProps } from '../../entities'
 import { createClient } from '../../prismicio'
 import * as prismic from '@prismicio/client'
+import { MainLayout } from '../../components/main-layout'
 
 // NOTE: You have to create your first prismic document to make this work
 // export async function getStaticPaths() {
@@ -59,11 +60,11 @@ const Home: NextPage<PageProps> = ({ doc }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center py-1 px-4 mx-auto mt-10 max-w-4xl">
+      <MainLayout>
         <h1>News Detail</h1>
         <p>Edit the [uid].tsx in /pages/news to change the content of this page.</p>
         <Image src="/wip.png" alt="Website Starter Kit" width={600} height={600} />
-      </main>
+      </MainLayout>
     </div>
   )
 }

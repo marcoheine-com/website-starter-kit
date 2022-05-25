@@ -13,6 +13,29 @@
           "thumbnails": []
         }
       },
+      "burgerMenuItems": {
+        "type": "Group",
+        "config": {
+          "label": "Burger Menu Items",
+          "fields": {
+            "burgerMenuLink": {
+              "type": "Link",
+              "config": {
+                "label": "Burger Menu Link",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "burgerMenulinkLabel": {
+              "type": "Text",
+              "config": {
+                "label": "Burger Menulink Label",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
       "socialLinks": {
         "type": "Group",
         "config": {
@@ -30,6 +53,29 @@
               "type": "Text",
               "config": {
                 "label": "Social Link Label",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "NavItems": {
+        "type": "Group",
+        "config": {
+          "label": "Nav Items",
+          "fields": {
+            "navLink": {
+              "type": "Link",
+              "config": {
+                "label": "Nav Link",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "navLinkLabel": {
+              "type": "Text",
+              "config": {
+                "label": "Nav Link Label",
                 "placeholder": ""
               }
             }

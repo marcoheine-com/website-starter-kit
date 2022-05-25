@@ -1,7 +1,11 @@
 {
   "_cts": {
-    "header": {},
-    "footer": {},
+    "header": {
+      "burgerMenuItems": {}
+    },
+    "footer": {
+      "navItems": {}
+    },
     "form": {},
     "index": {},
     "news-distribution": {},
