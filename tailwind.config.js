@@ -10,6 +10,9 @@ module.exports = {
       1920: '1920px',
     },
     extend: {
+      colors: {
+        'black-48': 'rgba(0, 0, 0, 0.48)',
+      },
       maxWidth: {
         'container-sm': '720px',
         'container-md': '960px',

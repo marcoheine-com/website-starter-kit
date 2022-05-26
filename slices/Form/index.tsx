@@ -1,10 +1,11 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
+import { RichTextField } from '@prismicio/types'
 
 interface Props {
   slice: {
     primary: {
-      content: any
+      content: RichTextField
       linkToForm: {
         data: any
       }

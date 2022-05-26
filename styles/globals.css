@@ -41,8 +41,12 @@
 }
 
 @layer utilities {
+  .page-container {
+    @apply flex flex-col items-center mx-auto;
+  }
+
   .main-layout {
-    @apply flex flex-col items-center max-w-container-full mx-auto;
+    @apply max-w-container-full;
   }
 
   .padding-x {

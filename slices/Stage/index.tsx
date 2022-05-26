@@ -1,4 +1,5 @@
 import { PrismicRichText } from '@prismicio/react'
+import { RichTextField } from '@prismicio/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -7,7 +8,7 @@ import { ImageProps } from '../../entities'
 interface Props {
   slice: {
     primary: {
-      content: any
+      content: RichTextField
       asset: 'video' | 'image'
       videoLink: string
       image: ImageProps

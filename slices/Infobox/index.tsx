@@ -1,11 +1,12 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import Link from 'next/link'
+import { RichTextField } from '@prismicio/types'
 
 interface Props {
   slice: {
     primary: {
-      content: any
+      content: RichTextField
       link: string
       linkLabel?: string
     }

@@ -1,11 +1,12 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
+import { RichTextField } from '@prismicio/types'
 
 interface Props {
   slice: {
     primary: {
       quote: string
-      details: any
+      details: RichTextField
     }
   }
 }

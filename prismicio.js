@@ -17,7 +17,7 @@ export function linkResolver(doc) {
     case 'news-detail':
       return `/news/${doc.uid}`
     default:
-      return null
+      return '/'
   }
 }
 

@@ -1,8 +1,9 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { MainLayout } from '../../components/main-layout'
-import { ImageProps } from '../../entities'
+import { Footer } from '../../components/footer'
+import { Header } from '../../components/header'
+import { FooterProps, HeaderProps, ImageProps } from '../../entities'
 import { createClient } from '../../prismicio'
 
 // NOTE: You have to create your first prismic document to make this work
@@ -29,24 +30,30 @@ interface PageProps {
     metaDescription: string
     thumbnail: ImageProps
   }
+  header: HeaderProps
+  footer: FooterProps
 }
 
-const Home: NextPage<PageProps> = ({ doc }) => {
+const News: NextPage<PageProps> = ({ doc, header, footer }) => {
   return (
-    <div>
+    <div className="page-container">
       <Head>
         <title>Website Starter kit</title>
         <meta name="description" content="Website Starter kit to kickstart new website projects" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <MainLayout>
+      <Header data={header?.data} />
+
+      <main className="main-layout padding-x">
         <h1>News</h1>
         <p>Edit the index.tsx /pages/news to change the content of this page.</p>
         <Image src="/wip.png" alt="Website Starter Kit" width={600} height={600} />
-      </MainLayout>
+      </main>
+
+      <Footer data={footer?.data} />
     </div>
   )
 }
 
-export default Home
+export default News

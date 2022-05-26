@@ -1,4 +1,5 @@
 import { PrismicRichText } from '@prismicio/react'
+import { RichTextField } from '@prismicio/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -6,7 +7,7 @@ import { ImageProps, LinkProps } from '../../entities'
 
 interface DefaultCardItem {
   asset: ImageProps
-  content: any
+  content: RichTextField
   link: LinkProps
   linkLabel: string
 }
@@ -20,7 +21,7 @@ interface LinkedCardItem {
 interface IconCardItem {
   asset: ImageProps
   backgroundAsset: ImageProps
-  content: any
+  content: RichTextField
   link: LinkProps
   linkLabel: string
 }
@@ -28,7 +29,7 @@ interface IconCardItem {
 interface Props {
   slice: {
     primary: {
-      content: any
+      content: RichTextField
       layout: 'two-column' | 'three-column'
       backgroundColor: boolean
     }

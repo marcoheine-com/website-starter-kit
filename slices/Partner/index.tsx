@@ -1,16 +1,17 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
-import { LinkProps } from '../../entities'
 import Image from 'next/image'
 import Link from 'next/link'
+import { RichTextField } from '@prismicio/types'
+import { LinkProps, ImageProps } from '../../entities'
 
 interface Props {
   slice: {
     primary: {
-      content: any
+      content: RichTextField
     }
     items: {
-      image: any
+      image: ImageProps
       link: LinkProps
     }[]
   }

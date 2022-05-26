@@ -3,11 +3,12 @@ import { PrismicRichText } from '@prismicio/react'
 import { ImageProps } from '../../entities'
 import Link from 'next/link'
 import Image from 'next/image'
+import { RichTextField } from '@prismicio/types'
 
 interface Props {
   slice: {
     primary: {
-      content: any
+      content: RichTextField
       asset: ImageProps
       changeOrder: boolean
       link?: string
