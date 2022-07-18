@@ -1,18 +1,14 @@
 {
-  "id": "518fccfd-a6b8-4335-98ab-9ff54f798ab2",
-  "uid": "quia-sed-illo",
+  "id": "8e66859c-323a-45c5-875c-3c5a99d0dff1",
+  "uid": "animi-delectus-architecto",
   "type": "index",
   "data": {
-    "metaTitle": "integrate bleeding-edge vortals",
-    "metaDescription": "engage best-of-breed mindshare",
-    "Thumbnail": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": "Placeholder image",
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
-    }
+    "title": "reinvent efficient markets",
+    "description": "reinvent cross-platform models",
+    "image": {
+      "link_type": "media",
+      "url": "https://source.unsplash.com/daily"
+    },
+    "imageAlt": "syndicate viral networks"
   }
 }

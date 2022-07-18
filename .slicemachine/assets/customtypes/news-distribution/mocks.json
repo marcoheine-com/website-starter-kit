@@ -1,18 +1,14 @@
 {
-  "id": "1ea4f7f2-ee2e-45d5-a43b-370a458541e1",
-  "uid": "quia-deleniti-reiciendis",
+  "id": "b592f752-9afc-48ba-866e-727530da0104",
+  "uid": "hic-laboriosam-consequatur",
   "type": "news-distribution",
   "data": {
-    "metaTitle": "disintermediate best-of-breed vortals",
-    "metaDescription": "iterate holistic channels",
-    "thumbnail": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": "Placeholder image",
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?w=900&h=500&fit=crop"
-    }
+    "title": "whiteboard compelling partnerships",
+    "description": "envisioneer enterprise markets",
+    "image": {
+      "link_type": "media",
+      "url": "https://source.unsplash.com/daily"
+    },
+    "imageAlt": "deliver user-centric web services"
   }
 }

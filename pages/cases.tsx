@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from 'next'
-import Head from 'next/head'
 import Image from 'next/image'
 import { Footer } from '../components/footer'
+import { HeadComponent } from '../components/head/head'
 import { Header } from '../components/header'
 import { HeaderProps, FooterProps, ImageProps } from '../entities'
 import { createClient } from '../prismicio'
@@ -26,9 +26,13 @@ import { createClient } from '../prismicio'
 interface PageProps {
   doc: {
     uid: string
-    metaTitle: string
-    metaDescription: string
-    thumbnail: ImageProps
+    title: string
+    description: string
+    image: {
+      url: string
+      alt: string
+    }
+    imageAlt: string
   }
   header: HeaderProps
   footer: FooterProps
@@ -37,11 +41,12 @@ interface PageProps {
 const Home: NextPage<PageProps> = ({ doc, header, footer }) => {
   return (
     <div className="page-container">
-      <Head>
-        <title>Website Starter kit</title>
-        <meta name="description" content="Website Starter kit to kickstart new website projects" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadComponent
+        title={doc?.title}
+        description={doc?.description}
+        image={doc?.image}
+        imageAlt={doc?.imageAlt}
+      />
 
       <Header data={header?.data} />
 

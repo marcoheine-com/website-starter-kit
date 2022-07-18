@@ -1,18 +1,14 @@
 {
-  "id": "638856c1-d8ca-429b-a175-6e91a2151c7d",
-  "uid": "iure-quo-libero",
+  "id": "73365d45-17e5-41f5-a6c4-b30a8118e65b",
+  "uid": "consequatur-quas-nihil",
   "type": "content-page",
   "data": {
-    "metaTitle": "productize scalable e-commerce",
-    "metaDescription": "integrate visionary users",
-    "thumbnail": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": "Placeholder image",
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
-    }
+    "title": "architect viral deliverables",
+    "Description": "optimize out-of-the-box convergence",
+    "image": {
+      "link_type": "media",
+      "url": "https://source.unsplash.com/daily"
+    },
+    "imageAlt": "disintermediate sexy communities"
   }
 }

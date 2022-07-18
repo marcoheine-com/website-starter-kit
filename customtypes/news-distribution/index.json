@@ -12,26 +12,33 @@
           "placeholder": ""
         }
       },
-      "metaTitle": {
+      "title": {
         "type": "Text",
         "config": {
-          "label": "Meta Title",
+          "label": "Title",
           "placeholder": ""
         }
       },
-      "metaDescription": {
+      "description": {
         "type": "Text",
         "config": {
-          "label": "Meta Description",
+          "label": "Description",
           "placeholder": ""
         }
       },
-      "thumbnail": {
-        "type": "Image",
+      "image": {
+        "type": "Link",
         "config": {
-          "label": "Thumbnail",
-          "constraint": {},
-          "thumbnails": []
+          "label": "Image",
+          "placeholder": "",
+          "select": "media"
+        }
+      },
+      "imageAlt": {
+        "type": "Text",
+        "config": {
+          "label": "Image Alt",
+          "placeholder": ""
         }
       }
     }
