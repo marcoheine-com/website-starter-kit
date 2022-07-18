@@ -18,7 +18,18 @@ This repository aims to be a **kickstart** for every new project because the too
 Clone the repository:
 
 ```bash
-git clone git@github.com:mkuehb/website-starter-kit.git <YOUR_PROJECT_NAME>
+git clone git@github.com:marcoheine-com/website-starter-kit.git <YOUR_PROJECT_NAME>
+```
+
+Replace the `apiEndpoint` field with your Prismic repository URL in the [sm.json](sm.json) file. Everything
+else is already setup for using all the great prismic features, like the preview mode, link and route
+resolvers, etc.
+
+```diff
+...
+- "apiEndpoint": "YOUR_API_ENDPOINT"
++ "apiEndpoint": "https://<YOUR_PROJECT>.prismic.io/api/v2",
+...
 ```
 
 Install the dependencies:
@@ -26,10 +37,6 @@ Install the dependencies:
 ```bash
 npm install
 ```
-
-Replace the `apiEndpoint` field with your Prismic repository URL in the [sm.json](sm.json) file. Everything
-else is already setup for using all the great prismic features, like the preview mode, link and route
-resolvers, etc.
 
 Start the development server:
 
