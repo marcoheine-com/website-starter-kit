@@ -5,6 +5,7 @@ import { HeadComponent } from '../components/head/head'
 import { Header } from '../components/header'
 import { FooterProps, HeaderProps, ImageProps } from '../entities'
 import { createClient } from '../prismicio'
+import { IndexDocument } from '../types.generated'
 
 // NOTE: You have to create your first prismic document to make this work
 // export const getStaticProps: GetStaticProps = async ({ previewData }) => {
@@ -24,16 +25,7 @@ import { createClient } from '../prismicio'
 // }
 
 interface PageProps {
-  doc: {
-    uid: string
-    title: string
-    description: string
-    image: {
-      url: string
-      alt: string
-    }
-    imageAlt: string
-  }
+  doc: IndexDocument
   header: HeaderProps
   footer: FooterProps
 }
@@ -42,10 +34,10 @@ const Home: NextPage<PageProps> = ({ doc, header, footer }) => {
   return (
     <div className="page-container">
       <HeadComponent
-        title={doc?.title || 'Website Starter kit'}
-        description={doc?.description || 'Website Starter kit to kickstart new website projects'}
-        image={doc?.image}
-        imageAlt={doc?.imageAlt}
+        title={doc?.data?.title || 'Website Starter kit'}
+        description={doc?.data?.description || 'Website Starter kit to kickstart new website projects'}
+        image={doc?.data?.image}
+        imageAlt={doc?.data?.imageAlt}
       />
       <Header data={header?.data} />
 
