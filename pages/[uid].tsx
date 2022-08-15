@@ -71,7 +71,7 @@ const ContentPage: NextPage<PageProps> = ({ doc, header, footer }) => {
 
       <Header data={header?.data} />
 
-      <main className="main-layout padding-x">
+      <main className="max-w-screen-1680">
         <h1>Content Page</h1>
         <p>Edit the [uid].tsx in /pages to change the content of this page.</p>
         <Image src="/wip.png" alt="Website Starter Kit" width={600} height={600} />

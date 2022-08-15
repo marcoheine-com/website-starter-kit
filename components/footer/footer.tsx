@@ -12,7 +12,7 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
   const { contentColOne, contentColTwo, copyRight, logo, navItems, socialLinks } = data
 
   return (
-    <footer className="flex flex-wrap gap-4 justify-between mb-16 w-full max-w-container-lg padding-x">
+    <footer className="container-wrapper-xl mb-16 flex w-full max-w-container-lg flex-wrap justify-between gap-4">
       <span>
         <Image src={logo.url} alt={logo.alt} width={logo.dimensions.width} height={logo.dimensions.height} />
         <p>{copyRight}</p>

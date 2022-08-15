@@ -49,8 +49,8 @@ const Home: NextPage<PageProps> = ({ doc, header, footer }) => {
       />
       <Header data={header?.data} />
 
-      <main className="main-layout padding-x">
-        <h1>Website Starter Kit</h1>
+      <main className="page-container max-w-screen-1680">
+        <h1 className="container-wrapper-xl">Website Starter Kit</h1>
         <p>Edit the index.tsx to change the content of this page.</p>
         <Image src="/wip.png" alt="Website Starter Kit" width={600} height={600} />
       </main>

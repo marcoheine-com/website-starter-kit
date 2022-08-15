@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
   const { burgerMenuItems, logo, NavItems, socialLinks } = data
 
   return (
-    <header className="flex relative justify-between items-center py-4 w-full max-w-container-full padding-x">
+    <header className="container-wrapper-xl relative flex w-full max-w-container-full items-center justify-between py-4">
       <nav>
         <button
           aria-expanded="false"
@@ -36,11 +36,11 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
         <ul
           id="menuItems"
           className={`${
-            isOpen ? 'translate-x-0 opacity-1' : 'translate-x-[-1000px] opacity-0'
-          } absolute left-0 top-0 pt-28 transition-all bg-white w-full pl-16 z-[2] 960:w-auto 960:px-24 h-screen`}
+            isOpen ? 'opacity-1 translate-x-0' : 'translate-x-[-1000px] opacity-0'
+          } absolute left-0 top-0 z-[2] h-screen w-full bg-white pt-28 pl-16 transition-all 960:w-auto 960:px-24`}
           ref={ref}
         >
-          <span className="block mb-6 text-black-48">Menu</span>
+          <span className="mb-6 block text-black-48">Menu</span>
           {burgerMenuItems?.map((burgerMenuItem: BurgerMenuItem) => (
             <li key={burgerMenuItem.burgerMenuLink.uid} className="mb-6 last-of-type:mb-12">
               <Link href={linkResolver(burgerMenuItem.burgerMenuLink)}>
@@ -49,7 +49,7 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
             </li>
           ))}
 
-          <span className="block mb-6 text-black-48">Folgen Sie uns auf</span>
+          <span className="mb-6 block text-black-48">Folgen Sie uns auf</span>
           <ul>
             {socialLinks?.map((socialLink: SocialItem) => (
               <li key={socialLink.socialLink.uid} className="mb-6 last:mb-0">
@@ -86,7 +86,7 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
       )}
 
       <div
-        className={`absolute top-0 left-0 w-full h-screen z-[1] ${
+        className={`absolute top-0 left-0 z-[1] h-screen w-full ${
           isOpen ? '960:block 960:bg-black-48' : 'hidden bg-transparent'
         }`}
       />

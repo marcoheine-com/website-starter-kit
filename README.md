@@ -32,6 +32,19 @@ resolvers, etc.
 ...
 ```
 
+Copy the file .env.example to .env.
+
+```bash
+cp .env.example .env
+```
+
+Add your prismic access token and other needed environment variables.
+
+```diff
+- "NEXT_PUBLIC_PRISMIC_ACCESS_TOKEN": ""
++ "NEXT_PUBLIC_PRISMIC_ACCESS_TOKEN": "YOUR_PRISMIC_ACCESS_TOKEN",
+```
+
 Install the dependencies:
 
 ```bash
@@ -44,8 +57,8 @@ Start the development server:
 npm run dev
 ```
 
-Now your website runs on [localhost:3000](http://localhost:3000). You can start building the front-end or
-[model the content](#prismic-custom-types-and-slices).
+And thats it! 🚀 Now your website runs on [localhost:3000](http://localhost:3000). You can start building the
+front-end or [model the content](#prismic-custom-types-and-slices).
 
 ## The main parts
 
@@ -77,12 +90,12 @@ websites.
 
 #### Slices
 
-Card, Form, Image, InfoBox, Partner, Quote, Stage, Text, TextImage, Video
+- Card, Form, Image, InfoBox, Partner, Quote, Stage, Text, TextImage, Video
 
 #### Custom Types
 
-Index Page, Content Page, Services Page, Service Detail Page, News Page, News Detail Page, Cases Page, Header,
-Footer, Form, Case Modal, Service Filter Item
+- Index Page, Content Page, Services Page, Service Detail Page, News Page, News Detail Page, Cases Page,
+  Header, Footer, Form, Case Modal, Service Filter Item
 
 To edit them, or add new ones, use the [Slice Machine](https://prismic.io/docs/core-concepts/slice-machine)
 
