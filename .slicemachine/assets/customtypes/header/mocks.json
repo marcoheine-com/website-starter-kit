@@ -1,91 +1,106 @@
 {
-  "id": "f1a7104c-99ae-40db-8fc5-4cbf6591898b",
-  "uid": "numquam-nobis-expedita",
-  "type": "header",
-  "data": {
-    "logo": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": "Placeholder image",
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop"
+  "logo": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+      "width": 4016,
+      "height": 6016
     },
-    "burgerMenuItems": [
-      {
-        "burgerMenuLink": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "burgerMenulinkLabel": "redefine intuitive applications"
+    "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+    "width": 4016,
+    "height": 6016,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
       },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "burgerMenuItems": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "burgerMenuLink": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "burgerMenulinkLabel": "envisioneer web-enabled applications"
-      },
-      {
-        "burgerMenuLink": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "burgerMenulinkLabel": "benchmark one-to-one supply-chains"
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "burgerMenuLink",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          ],
+          [
+            "burgerMenulinkLabel",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "guess",
+              "type": "Text"
+            }
+          ]
+        ]
       }
-    ],
-    "socialLinks": [
+    ]
+  },
+  "socialLinks": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "socialLink": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "socialLinkLabel": "drive viral architectures"
-      },
-      {
-        "socialLink": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "socialLinkLabel": "grow sexy supply-chains"
-      },
-      {
-        "socialLink": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "socialLinkLabel": "scale one-to-one bandwidth"
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "socialLink",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ],
+          [
+            "socialLinkLabel",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "but",
+              "type": "Text"
+            }
+          ]
+        ]
       }
-    ],
-    "NavItems": [
+    ]
+  },
+  "NavItems": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "navLink": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "navLinkLabel": "implement best-of-breed e-business"
-      },
-      {
-        "navLink": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "navLinkLabel": "transform rich web-readiness"
-      },
-      {
-        "navLink": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "navLinkLabel": "brand bleeding-edge vortals"
-      },
-      {
-        "navLink": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "navLinkLabel": "syndicate customized infomediaries"
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "navLink",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ],
+          [
+            "navLinkLabel",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "rich",
+              "type": "Text"
+            }
+          ]
+        ]
       }
     ]
   }

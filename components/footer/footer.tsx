@@ -1,10 +1,14 @@
+import {
+  FooterDocument,
+  FooterDocumentDataNavItemsItem,
+  FooterDocumentDataSocialLinksItem,
+} from '@/types.generated'
 import { PrismicRichText } from '@prismicio/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FooterProps, NavItem, SocialItem } from '../../entities'
 import { linkResolver } from '../../prismicio'
 
-export const Footer: React.FC<FooterProps> = ({ data }) => {
+export const Footer: React.FC<FooterDocument> = ({ data }) => {
   if (!data) {
     return null
   }
@@ -14,7 +18,14 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
   return (
     <footer className="container-wrapper-xl mb-16 flex w-full max-w-container-lg flex-wrap justify-between gap-4">
       <span>
-        <Image src={logo.url} alt={logo.alt} width={logo.dimensions.width} height={logo.dimensions.height} />
+        {logo.url ? (
+          <Image
+            src={logo.url}
+            alt={logo.alt || ''}
+            width={logo.dimensions.width}
+            height={logo.dimensions.height}
+          />
+        ) : null}
         <p>{copyRight}</p>
       </span>
 
@@ -27,8 +38,8 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
 
       {navItems?.length > 0 && (
         <ul>
-          {navItems?.map((navItem: NavItem) => (
-            <li key={navItem.navLink.url}>
+          {navItems?.map((navItem: FooterDocumentDataNavItemsItem, index: number) => (
+            <li key={navItem.navLinkLabel || index}>
               <Link href={linkResolver(navItem.navLink)}>
                 <a>{navItem.navLinkLabel}</a>
               </Link>
@@ -39,8 +50,8 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
 
       {socialLinks?.length > 0 && (
         <ul>
-          {socialLinks?.map((socialItem: SocialItem) => (
-            <li key={socialItem.socialLink.url}>
+          {socialLinks?.map((socialItem: FooterDocumentDataSocialLinksItem, index: number) => (
+            <li key={socialItem.socialLinkLabel || index}>
               <Link href={linkResolver(socialItem.socialLink)}>
                 <a>{socialItem.socialLinkLabel}</a>
               </Link>

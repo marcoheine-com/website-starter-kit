@@ -1,101 +1,101 @@
 {
-  "id": "848ad8bd-dec4-4d7e-bcc7-ec00be21e7c6",
-  "uid": "qui-eos-quo",
-  "type": "case-modal",
-  "data": {
-    "image": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": "Placeholder image",
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop"
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "since"
+  },
+  "image": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+      "width": 12288,
+      "height": 16384
     },
-    "thumbnailRatio": "1:1",
-    "title": "integrate seamless initiatives",
-    "content": [
+    "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+    "width": 12288,
+    "height": 16384,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "thumbnailRatio": {
+    "__TYPE__": "FieldContent",
+    "value": "3:4",
+    "type": "Select"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "library",
+    "type": "Text"
+  },
+  "content": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "paragraph",
-        "text": "Aliqua laborum sunt labore voluptate et. Irure cupidatat anim sunt exercitation.",
-        "spans": []
-      }
-    ],
-    "serviceFilterItem": [
-      {
-        "serviceFilter": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
-      },
-      {
-        "serviceFilter": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        }
-      },
-      {
-        "serviceFilter": {
-          "link_type": "Web",
-          "url": "http://google.com"
+        "content": {
+          "text": "In minim culpa anim Lorem do. Sit exercitation cillum veniam aliquip nisi nulla commodo et laborum amet anim veniam."
         }
       }
-    ],
-    "caseImage": [
+    ]
+  },
+  "serviceFilterItem": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "image": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
-        }
-      },
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "serviceFilter",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "DocumentLink",
+                "id": "mock_document_id"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "caseImage": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "image": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
-        }
-      },
-      {
-        "image": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
-        }
-      },
-      {
-        "image": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?w=900&h=500&fit=crop"
-        }
-      },
-      {
-        "image": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=900&h=500&fit=crop"
-        }
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "image",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+                "width": 6000,
+                "height": 4000
+              },
+              "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+              "width": 6000,
+              "height": 4000,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ]
+        ]
       }
     ]
   }

@@ -1,11 +1,9 @@
 {
-  "id": "d4ff57f2-3432-4169-a5c9-91be03a196b3",
-  "uid": "illum-illum-nihil",
-  "type": "form",
-  "data": {
-    "formspreeLink": {
-      "link_type": "Web",
-      "url": "https://slicemachine.dev"
+  "formspreeLink": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "http://twitter.com"
     }
   }
 }

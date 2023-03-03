@@ -1,44 +1,12 @@
-import { PrismicRichText } from '@prismicio/react'
-import { RichTextField } from '@prismicio/types'
+import { linkResolver } from '@/prismicio'
+import { CardSlice, CardSliceIconItem } from '@/types.generated'
+import { filledLinkTypeGuard } from '@/utils/type-guards/isFilledLink'
+import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { ImageProps, LinkProps } from '../../entities'
 
-interface DefaultCardItem {
-  asset: ImageProps
-  content: RichTextField
-  link: LinkProps
-  linkLabel: string
-}
-
-interface LinkedCardItem {
-  linkToPage: {
-    data: any
-  }
-}
-
-interface IconCardItem {
-  asset: ImageProps
-  backgroundAsset: ImageProps
-  content: RichTextField
-  link: LinkProps
-  linkLabel: string
-}
-
-interface Props {
-  slice: {
-    primary: {
-      content: RichTextField
-      layout: 'two-column' | 'three-column'
-      backgroundColor: boolean
-    }
-    variation: 'default' | 'itemAsLinkToServices' | 'icon'
-    items: any
-  }
-}
-
-const Card: React.FC<Props> = ({ slice }) => {
+const Card: React.FC<SliceComponentProps<CardSlice>> = ({ slice }) => {
   if (slice.variation === 'itemAsLinkToServices') {
     return (
       <section>
@@ -51,26 +19,29 @@ const Card: React.FC<Props> = ({ slice }) => {
     return (
       <section>
         <PrismicRichText field={slice.primary.content} />
-        {slice.items?.map((item: any, index: number) => (
-          <div key={index}>
-            {item.asset.url ? (
-              <Image
-                src={item.asset.url}
-                width={item.asset.dimensions.width}
-                height={item.asset.dimensions.height}
-                alt={item.asset.alt}
-              />
-            ) : null}
+        {slice.items?.map((item: CardSliceIconItem, index: number) => {
+          const isFilledLink = filledLinkTypeGuard(item.link) ? item : null
+          return (
+            <div key={index}>
+              {item.asset.url ? (
+                <Image
+                  src={item.asset.url}
+                  width={item.asset.dimensions.width}
+                  height={item.asset.dimensions.height}
+                  alt={item.asset.alt || ''}
+                />
+              ) : null}
 
-            <PrismicRichText field={item.content} />
+              <PrismicRichText field={item.content} />
 
-            {item.link && (
-              <Link href={item.link}>
-                <a>{item.linkLabel}</a>
-              </Link>
-            )}
-          </div>
-        ))}
+              {isFilledLink && (
+                <Link href={linkResolver(isFilledLink)}>
+                  <a>{isFilledLink.linkLabel}</a>
+                </Link>
+              )}
+            </div>
+          )
+        })}
       </section>
     )
   }

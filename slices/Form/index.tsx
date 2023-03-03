@@ -1,19 +1,8 @@
 import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
-import { RichTextField } from '@prismicio/types'
+import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
+import { FormSlice } from '@/types.generated'
 
-interface Props {
-  slice: {
-    primary: {
-      content: RichTextField
-      linkToForm: {
-        data: any
-      }
-    }
-  }
-}
-
-const Form: React.FC<Props> = ({ slice }) => {
+const Form: React.FC<SliceComponentProps<FormSlice>> = ({ slice }) => {
   return (
     <section>
       <PrismicRichText field={slice.primary.content} />

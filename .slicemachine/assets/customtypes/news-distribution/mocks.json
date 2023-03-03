@@ -1,14 +1,32 @@
 {
-  "id": "b592f752-9afc-48ba-866e-727530da0104",
-  "uid": "hic-laboriosam-consequatur",
-  "type": "news-distribution",
-  "data": {
-    "title": "whiteboard compelling partnerships",
-    "description": "envisioneer enterprise markets",
-    "image": {
-      "link_type": "media",
-      "url": "https://source.unsplash.com/daily"
-    },
-    "imageAlt": "deliver user-centric web services"
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "sum"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "out",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "FieldContent",
+    "value": "orange",
+    "type": "Text"
+  },
+  "image": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "id": "mock_Media_link",
+      "kind": "image/jpeg",
+      "name": "mock_name",
+      "url": "https://source.unsplash.com/daily",
+      "size": "0",
+      "__TYPE__": "FileLink"
+    }
+  },
+  "imageAlt": {
+    "__TYPE__": "FieldContent",
+    "value": "instance",
+    "type": "Text"
   }
 }

@@ -1,33 +1,27 @@
 import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
-import { ImageProps, LinkProps } from '../../entities'
+import { SliceComponentProps } from '@prismicio/react'
 import Image from 'next/image'
+import { ImageSliceSlice, ImageSliceSliceDefaultItem } from '@/types.generated'
+import { filledImageTypeGuard } from '@/utils/type-guards/isFilledImage'
 
-interface ImageItem {
-  asset: ImageProps
-}
-
-interface Props {
-  slice: {
-    primary: {
-      layout: 'single' | 'gallery'
-    }
-    items: ImageItem[]
-  }
-}
-
-const ImageSlice: React.FC<Props> = ({ slice }) => {
+const ImageSlice: React.FC<SliceComponentProps<ImageSliceSlice>> = ({ slice }) => {
   return (
     <section>
-      {slice.items?.map((item, index) => (
-        <Image
-          key={index}
-          src={item.asset.url}
-          width={item.asset.dimensions.width}
-          height={item.asset.dimensions.height}
-          alt={item.asset.alt}
-        />
-      ))}
+      {slice.items?.map((item: ImageSliceSliceDefaultItem, index) => {
+        const filledImage = filledImageTypeGuard(item.asset) ? item.asset : null
+
+        if (!filledImage) return null
+
+        return (
+          <Image
+            key={index}
+            src={filledImage.url}
+            width={filledImage.dimensions.width}
+            height={filledImage.dimensions.height}
+            alt={filledImage.alt || ''}
+          />
+        )
+      })}
     </section>
   )
 }

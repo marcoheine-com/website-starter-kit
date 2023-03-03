@@ -1,8 +1,11 @@
 {
-  "id": "eb9dfbd7-d926-432f-ab99-312be4e21e95",
-  "uid": "totam-ea-esse",
-  "type": "service-filter-item",
-  "data": {
-    "title": "seize holistic deliverables"
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "task"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "mistake",
+    "type": "Text"
   }
 }

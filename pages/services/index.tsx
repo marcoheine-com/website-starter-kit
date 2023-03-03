@@ -1,54 +1,44 @@
+import { FooterDocument, HeaderDocument, ServicesDistributionDocument } from '@/types.generated'
 import type { GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
 import { Footer } from '../../components/footer'
 import { HeadComponent } from '../../components/head/head'
 import { Header } from '../../components/header'
-import { FooterProps, HeaderProps, ImageProps } from '../../entities'
 import { createClient } from '../../prismicio'
 
-// NOTE: You have to create your first prismic document to make this work
-// export const getStaticProps: GetStaticProps = async ({ previewData }) => {
-//   const client = createClient(previewData)
+export const getStaticProps: GetStaticProps = async ({ previewData }) => {
+  const client = createClient(previewData)
 
-//   const doc = (await client.getSingle('services-distribution', {})) || null
-//   const header = (await client.getSingle('header', {})) || null
-//   const footer = (await client.getSingle('footer', {})) || null
+  const doc = (await client.getSingle('services-distribution', {})) || null
+  const header = (await client.getSingle('header', {})) || null
+  const footer = (await client.getSingle('footer', {})) || null
 
-//   return {
-//     props: {
-//       doc,
-//       header,
-//       footer,
-//     },
-//   }
-// }
+  return {
+    props: {
+      doc,
+      header,
+      footer,
+    },
+  }
+}
 
 interface PageProps {
-  doc: {
-    uid: string
-    title: string
-    description: string
-    image: {
-      url: string
-      alt: string
-    }
-    imageAlt: string
-  }
-  header: HeaderProps
-  footer: FooterProps
+  doc: ServicesDistributionDocument
+  header: HeaderDocument
+  footer: FooterDocument
 }
 
 const Services: NextPage<PageProps> = ({ doc, header, footer }) => {
   return (
     <div className="page-container">
       <HeadComponent
-        title={doc?.title}
-        description={doc?.description}
-        image={doc?.image}
-        imageAlt={doc?.imageAlt}
+        title={doc?.data?.title}
+        description={doc?.data?.description}
+        image={doc?.data?.image}
+        imageAlt={doc?.data?.imageAlt}
       />
 
-      <Header data={header?.data} />
+      <Header {...header} />
 
       <main className="max-w-screen-1680">
         <h1>Services</h1>
@@ -56,7 +46,7 @@ const Services: NextPage<PageProps> = ({ doc, header, footer }) => {
         <Image src="/wip.png" alt="Website Starter Kit" width={600} height={600} />
       </main>
 
-      <Footer data={footer?.data} />
+      <Footer {...footer} />
     </div>
   )
 }

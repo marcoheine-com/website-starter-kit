@@ -1,39 +1,33 @@
 import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
+import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { RichTextField } from '@prismicio/types'
-import { LinkProps, ImageProps } from '../../entities'
+import { PartnerSlice } from '@/types.generated'
+import { filledImageTypeGuard } from '@/utils/type-guards/isFilledImage'
+import { filledLinkTypeGuard } from '@/utils/type-guards/isFilledLink'
+import { linkResolver } from '@/prismicio'
 
-interface Props {
-  slice: {
-    primary: {
-      content: RichTextField
-    }
-    items: {
-      image: ImageProps
-      link: LinkProps
-    }[]
-  }
-}
-
-const Partner: React.FC<Props> = ({ slice }) => {
+const Partner: React.FC<SliceComponentProps<PartnerSlice>> = ({ slice }) => {
   return (
     <section>
       <PrismicRichText field={slice.primary.content} />
 
-      {slice.items?.map((item, index) => (
-        <Link key={index} href={item.link.url}>
-          <a>
+      {slice.items?.map((item, index) => {
+        const filledLink = filledLinkTypeGuard(item.link) ? item.link : null
+        const filledImage = filledImageTypeGuard(item.image) ? item.image : null
+        if (!filledLink || !filledImage) return null
+
+        return (
+          <Link key={index} href={linkResolver(filledLink)}>
             <Image
-              src={item.image.url}
-              width={item.image.dimensions.width}
-              height={item.image.dimensions.height}
-              alt={item.image.alt}
+              src={filledImage.url}
+              width={filledImage.dimensions.width}
+              height={filledImage.dimensions.height}
+              alt={filledImage.alt || ''}
             />
-          </a>
-        </Link>
-      ))}
+          </Link>
+        )
+      })}
     </section>
   )
 }

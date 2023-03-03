@@ -1,7 +1,2 @@
 export * from './image'
 export * from './link'
-export * from './navItem'
-export * from './socialItem'
-export * from './footer'
-export * from './header'
-export * from './burgerMenuItem'

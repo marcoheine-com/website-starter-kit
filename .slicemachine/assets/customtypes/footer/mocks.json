@@ -1,83 +1,105 @@
 {
-  "id": "d9752ac5-dced-4a28-b54d-e234be95db09",
-  "uid": "cupiditate-quam-illum",
-  "type": "footer",
-  "data": {
-    "logo": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": "Placeholder image",
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
+  "logo": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+      "width": 4016,
+      "height": 6016
     },
-    "copyRight": "unleash bleeding-edge supply-chains",
-    "contentColOne": [
+    "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+    "width": 4016,
+    "height": 6016,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "copyRight": {
+    "__TYPE__": "FieldContent",
+    "value": "ourselves",
+    "type": "Text"
+  },
+  "contentColOne": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "paragraph",
-        "text": "Officia in aute dolor aliqua ut Lorem aute excepteur laborum tempor nulla quis.",
-        "spans": []
+        "content": {
+          "text": "Nisi ut dolor pariatur Lorem excepteur tempor ex irure occaecat voluptate sint veniam duis."
+        }
       }
-    ],
-    "contentColTwo": [
+    ]
+  },
+  "contentColTwo": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "paragraph",
-        "text": "Non esse magna ullamco. Irure pariatur sit exercitation ut sit qui dolor proident officia ut esse veniam ipsum dolore adipisicing. Amet amet officia fugiat ex.",
-        "spans": []
+        "content": {
+          "text": "Laboris nisi minim sint minim ullamco mollit consectetur est. Ut non elit dolore et veniam excepteur dolore culpa in ullamco aliqua tempor esse mollit."
+        }
       }
-    ],
-    "navItems": [
+    ]
+  },
+  "navItems": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "navLink": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "navLinkLabel": "maximize global communities"
-      },
-      {
-        "navLink": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "navLinkLabel": "expedite best-of-breed portals"
-      },
-      {
-        "navLink": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "navLinkLabel": "recontextualize next-generation architectures"
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "navLink",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ],
+          [
+            "navLinkLabel",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "settle",
+              "type": "Text"
+            }
+          ]
+        ]
       }
-    ],
-    "socialLinks": [
+    ]
+  },
+  "socialLinks": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "socialLink": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "socialLinkLabel": "disintermediate world-class ROI"
-      },
-      {
-        "socialLink": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "socialLinkLabel": "harness scalable functionalities"
-      },
-      {
-        "socialLink": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "socialLinkLabel": "evolve proactive applications"
-      },
-      {
-        "socialLink": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "socialLinkLabel": "matrix innovative platforms"
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "socialLink",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            }
+          ],
+          [
+            "socialLinkLabel",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "express",
+              "type": "Text"
+            }
+          ]
+        ]
       }
     ]
   }

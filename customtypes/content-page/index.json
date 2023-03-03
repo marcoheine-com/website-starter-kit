@@ -19,7 +19,7 @@
           "placeholder": ""
         }
       },
-      "Description": {
+      "description": {
         "type": "Text",
         "config": {
           "label": "Description",

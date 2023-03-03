@@ -4,8 +4,8 @@ import { useRouter } from 'next/router'
 import * as prismicT from '@prismicio/types'
 
 interface Props {
-  title: string
-  description: string
+  title: string | null
+  description: string | null
   image: prismicT.LinkToMediaField
   imageAlt: prismicT.KeyTextField
   favicon?: string
@@ -31,11 +31,11 @@ export const HeadComponent: React.FC<Props> = ({
     <Head>
       <title>{title}</title>
       <meta property="og:type" content="website" />
-      <meta property="og:description" content={description} />
+      <meta property="og:description" content={description || ''} />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:alt" content={imageAlt || undefined} />
-      <meta property="og:title" content={title} />
-      <meta name="description" content={description} />
+      <meta property="og:title" content={title || ''} />
+      <meta name="description" content={description || ''} />
       <link rel="icon" href={favicon} />
       <link rel="canonical" href={canonical} />
     </Head>
