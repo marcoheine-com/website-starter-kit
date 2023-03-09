@@ -1,40 +1,35 @@
-import { PrismicRichText } from '@prismicio/react'
-import { RichTextField } from '@prismicio/types'
+import { linkResolver } from '@/prismicio'
+import { StageSlice } from '@/types.generated'
+import { filledImageTypeGuard } from '@/utils/type-guards/isFilledImage'
+import { filledLinkTypeGuard } from '@/utils/type-guards/isFilledLink'
+import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { ImageProps } from '../../entities'
 
-interface Props {
-  slice: {
-    primary: {
-      content: RichTextField
-      asset: 'video' | 'image'
-      videoLink: string
-      image: ImageProps
-      layout: 'fullWidth' | 'splitView'
-      link: string
-      linkLabel: string
-    }
-  }
-}
-const Stage: React.FC<Props> = ({ slice }) => {
+const Stage: React.FC<SliceComponentProps<StageSlice>> = ({ slice }) => {
+  const filledLink = filledLinkTypeGuard(slice.primary.link) ? slice.primary.link : null
+  const filledImage = filledImageTypeGuard(slice.primary.image) ? slice.primary.image : null
+
   return (
     <section>
-      {slice.primary.asset === 'video' ? (
-        <video src={slice.primary.videoLink} controls className="w-full h-full" />
-      ) : (
+      {slice.primary.asset === 'video' && slice.primary.videoLink ? (
+        // @ts-ignore TODO: fix this
+        <video src={slice.primary.videoLink} controls className="h-full w-full" />
+      ) : null}
+
+      {filledImage && (
         <Image
-          src={slice.primary.image.url}
-          width={slice.primary.image.dimensions.width}
-          height={slice.primary.image.dimensions.height}
-          alt={slice.primary.image.alt}
+          src={filledImage?.url}
+          width={filledImage.dimensions.width}
+          height={filledImage.dimensions.height}
+          alt={filledImage.alt || ''}
         />
       )}
       <PrismicRichText field={slice.primary.content} />
 
-      {slice.primary.link && (
-        <Link href={slice.primary.link}>
+      {filledLink && (
+        <Link href={linkResolver(filledLink)}>
           <a>{slice.primary.linkLabel}</a>
         </Link>
       )}

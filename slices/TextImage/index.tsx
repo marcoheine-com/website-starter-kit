@@ -1,35 +1,27 @@
 import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
-import { ImageProps } from '../../entities'
+import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { RichTextField } from '@prismicio/types'
+import { TextImageSlice } from '@/types.generated'
+import { filledLinkTypeGuard } from '@/utils/type-guards/isFilledLink'
+import { linkResolver } from '@/prismicio'
 
-interface Props {
-  slice: {
-    primary: {
-      content: RichTextField
-      asset: ImageProps
-      changeOrder: boolean
-      link?: string
-      linkLabel: string
-    }
-    variation: 'default' | 'itemAsLinkToServices'
-  }
-}
-const TextImage: React.FC<Props> = ({ slice }) => {
+const TextImage: React.FC<SliceComponentProps<TextImageSlice>> = ({ slice }) => {
   if (slice.variation === 'default') {
+    const filledLink = filledLinkTypeGuard(slice.primary.link) ? slice.primary.link : null
     return (
       <section>
-        <Image
-          src={slice.primary.asset.url}
-          alt={slice.primary.asset.alt}
-          width={slice.primary.asset.dimensions.width}
-          height={slice.primary.asset.dimensions.height}
-        />
+        {slice.primary?.asset?.url ? (
+          <Image
+            src={slice.primary.asset.url}
+            alt={slice.primary.asset.alt || ''}
+            width={slice.primary.asset.dimensions.width}
+            height={slice.primary.asset.dimensions.height}
+          />
+        ) : null}
         <PrismicRichText field={slice.primary.content} />
-        {slice.primary.link && (
-          <Link href={slice.primary.link}>
+        {filledLink && (
+          <Link href={linkResolver(filledLink)}>
             <a>{slice.primary.linkLabel}</a>
           </Link>
         )}
@@ -37,6 +29,7 @@ const TextImage: React.FC<Props> = ({ slice }) => {
     )
   }
 
+  // TODO
   return <section></section>
 }
 

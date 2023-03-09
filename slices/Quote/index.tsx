@@ -1,16 +1,8 @@
 import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
-import { RichTextField } from '@prismicio/types'
+import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
+import { QuoteSlice } from '@/types.generated'
 
-interface Props {
-  slice: {
-    primary: {
-      quote: string
-      details: RichTextField
-    }
-  }
-}
-const Quote: React.FC<Props> = ({ slice }) => {
+const Quote: React.FC<SliceComponentProps<QuoteSlice>> = ({ slice }) => {
   return (
     <section>
       <h2>{slice.primary.quote}</h2>
