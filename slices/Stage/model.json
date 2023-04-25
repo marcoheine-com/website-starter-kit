@@ -22,60 +22,22 @@
         },
         "asset": {
           "type": "Select",
-          "config": {
-            "label": "Asset",
-            "placeholder": "",
-            "options": [
-              "video",
-              "image"
-            ]
-          }
+          "config": { "label": "Asset", "placeholder": "", "options": ["video", "image"] }
         },
         "videoLink": {
           "type": "Link",
-          "config": {
-            "label": "Video Link",
-            "placeholder": "",
-            "select": null
-          }
+          "config": { "label": "Video Link", "placeholder": "", "select": null }
         },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
+        "image": { "type": "Image", "config": { "label": "Image", "constraint": {}, "thumbnails": [] } },
         "layout": {
           "type": "Select",
-          "config": {
-            "label": "Layout",
-            "placeholder": "",
-            "options": [
-              "fullWidth",
-              "splitView"
-            ]
-          }
+          "config": { "label": "Layout", "placeholder": "", "options": ["fullWidth", "splitView"] }
         },
-        "link": {
-          "type": "Link",
-          "config": {
-            "label": "Link",
-            "placeholder": "",
-            "select": null
-          }
-        },
-        "linkLabel": {
-          "type": "Text",
-          "config": {
-            "label": "Link Label",
-            "placeholder": ""
-          }
-        }
+        "link": { "type": "Link", "config": { "label": "Link", "placeholder": "", "select": null } },
+        "linkLabel": { "type": "Text", "config": { "label": "Link Label", "placeholder": "" } }
       },
       "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/coach-collective/shared-slices/stage/default/71c842cdd6f2013952d9699d046f24b2145e0908.png?auto=compress%2Cformat"
     }
   ]
 }

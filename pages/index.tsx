@@ -7,7 +7,7 @@ import { createClient } from '../prismicio'
 import { FooterDocument, HeaderDocument, IndexDocument } from '../types.generated'
 
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
-  const client = createClient(previewData)
+  const client = createClient({ previewData })
 
   const doc = (await client.getSingle('index', {})) || null
   const header = (await client.getSingle('header', {})) || null

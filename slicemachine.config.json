@@ -1,6 +1,6 @@
 {
-  "apiEndpoint": "https://website-starter-kit.cdn.prismic.io/api/v2",
-  "repositoryName": "website-starter-kit",
+  "apiEndpoint": "https://coach-collective.cdn.prismic.io/api/v2",
+  "repositoryName": "coach-collective",
   "adapter": "@slicemachine/adapter-next",
   "libraries": ["./slices"],
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"

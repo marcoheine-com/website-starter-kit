@@ -20,14 +20,7 @@
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "asset": {
-          "type": "Image",
-          "config": {
-            "label": "Asset",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
+        "asset": { "type": "Image", "config": { "label": "Asset", "constraint": {}, "thumbnails": [] } },
         "changeOrder": {
           "type": "Boolean",
           "config": {
@@ -37,24 +30,11 @@
             "placeholder_false": "false"
           }
         },
-        "link": {
-          "type": "Link",
-          "config": {
-            "label": "Link",
-            "placeholder": "",
-            "select": null
-          }
-        },
-        "linkLabel": {
-          "type": "Text",
-          "config": {
-            "label": "Link Label",
-            "placeholder": ""
-          }
-        }
+        "link": { "type": "Link", "config": { "label": "Link", "placeholder": "", "select": null } },
+        "linkLabel": { "type": "Text", "config": { "label": "Link Label", "placeholder": "" } }
       },
       "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/coach-collective/shared-slices/text_image/default/71c842cdd6f2013952d9699d046f24b2145e0908.png?auto=compress%2Cformat"
     },
     {
       "id": "itemAsLinkToServices",
@@ -72,13 +52,7 @@
             "placeholder_false": "false"
           }
         },
-        "linkLabel": {
-          "type": "Text",
-          "config": {
-            "label": "Link Label",
-            "placeholder": ""
-          }
-        }
+        "linkLabel": { "type": "Text", "config": { "label": "Link Label", "placeholder": "" } }
       },
       "items": {
         "linkToPage": {
@@ -86,13 +60,11 @@
           "config": {
             "label": "Link To Page",
             "select": "document",
-            "customtypes": [
-              "services-distribution"
-            ]
+            "customtypes": ["services-distribution"]
           }
         }
       },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/coach-collective/shared-slices/text_image/itemAsLinkToServices/71c842cdd6f2013952d9699d046f24b2145e0908.png?auto=compress%2Cformat"
     }
   ]
 }

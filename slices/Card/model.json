@@ -22,14 +22,7 @@
         },
         "layout": {
           "type": "Select",
-          "config": {
-            "label": "Layout",
-            "placeholder": "",
-            "options": [
-              "two-column",
-              "three-column"
-            ]
-          }
+          "config": { "label": "Layout", "placeholder": "", "options": ["two-column", "three-column"] }
         },
         "backgroundColor": {
           "type": "Boolean",
@@ -42,14 +35,7 @@
         }
       },
       "items": {
-        "asset": {
-          "type": "Image",
-          "config": {
-            "label": "Asset",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
+        "asset": { "type": "Image", "config": { "label": "Asset", "constraint": {}, "thumbnails": [] } },
         "content": {
           "type": "StructuredText",
           "config": {
@@ -59,21 +45,8 @@
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "link": {
-          "type": "Link",
-          "config": {
-            "label": "Link",
-            "placeholder": "",
-            "select": null
-          }
-        },
-        "linkLabel": {
-          "type": "Text",
-          "config": {
-            "label": "Link Label",
-            "placeholder": ""
-          }
-        }
+        "link": { "type": "Link", "config": { "label": "Link", "placeholder": "", "select": null } },
+        "linkLabel": { "type": "Text", "config": { "label": "Link Label", "placeholder": "" } }
       },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     },
@@ -95,14 +68,7 @@
         },
         "layout": {
           "type": "Select",
-          "config": {
-            "label": "Layout",
-            "placeholder": "",
-            "options": [
-              "two-column",
-              "three-column"
-            ]
-          }
+          "config": { "label": "Layout", "placeholder": "", "options": ["two-column", "three-column"] }
         },
         "backgroundColor": {
           "type": "Boolean",
@@ -120,9 +86,7 @@
           "config": {
             "label": "Link To Page",
             "select": "document",
-            "customtypes": [
-              "services-distribution"
-            ]
+            "customtypes": ["services-distribution"]
           }
         }
       },
@@ -146,14 +110,7 @@
         },
         "layout": {
           "type": "Select",
-          "config": {
-            "label": "Layout",
-            "placeholder": "",
-            "options": [
-              "two-column",
-              "three-column"
-            ]
-          }
+          "config": { "label": "Layout", "placeholder": "", "options": ["two-column", "three-column"] }
         },
         "backgroundColor": {
           "type": "Boolean",
@@ -166,21 +123,10 @@
         }
       },
       "items": {
-        "asset": {
-          "type": "Image",
-          "config": {
-            "label": "Asset",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
+        "asset": { "type": "Image", "config": { "label": "Asset", "constraint": {}, "thumbnails": [] } },
         "backgroundAsset": {
           "type": "Link",
-          "config": {
-            "label": "Background Asset",
-            "placeholder": "",
-            "select": null
-          }
+          "config": { "label": "Background Asset", "placeholder": "", "select": null }
         },
         "content": {
           "type": "StructuredText",
@@ -191,21 +137,8 @@
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "link": {
-          "type": "Link",
-          "config": {
-            "label": "Link",
-            "placeholder": "",
-            "select": null
-          }
-        },
-        "linkLabel": {
-          "type": "Text",
-          "config": {
-            "label": "Link Label",
-            "placeholder": ""
-          }
-        }
+        "link": { "type": "Link", "config": { "label": "Link", "placeholder": "", "select": null } },
+        "linkLabel": { "type": "Text", "config": { "label": "Link Label", "placeholder": "" } }
       },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }

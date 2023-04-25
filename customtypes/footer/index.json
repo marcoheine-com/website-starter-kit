@@ -5,39 +5,7 @@
   "status": true,
   "json": {
     "Main": {
-      "logo": {
-        "type": "Image",
-        "config": {
-          "label": "Logo",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "copyRight": {
-        "type": "Text",
-        "config": {
-          "label": "Copy Right",
-          "placeholder": ""
-        }
-      },
-      "contentColOne": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Content Col One",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-        }
-      },
-      "contentColTwo": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Content Col Two",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-        }
-      },
+      "copyRight": { "type": "Text", "config": { "label": "Copy Right", "placeholder": "" } },
       "navItems": {
         "type": "Group",
         "config": {
@@ -45,42 +13,9 @@
           "fields": {
             "navLink": {
               "type": "Link",
-              "config": {
-                "label": "Nav Link",
-                "placeholder": "",
-                "select": null
-              }
+              "config": { "label": "Nav Link", "placeholder": "", "select": null }
             },
-            "navLinkLabel": {
-              "type": "Text",
-              "config": {
-                "label": "Nav Linklabel",
-                "placeholder": ""
-              }
-            }
-          }
-        }
-      },
-      "socialLinks": {
-        "type": "Group",
-        "config": {
-          "label": "Social Links",
-          "fields": {
-            "socialLink": {
-              "type": "Link",
-              "config": {
-                "label": "Social Link",
-                "placeholder": "",
-                "select": null
-              }
-            },
-            "socialLinkLabel": {
-              "type": "Text",
-              "config": {
-                "label": "Social Link Label",
-                "placeholder": ""
-              }
-            }
+            "navLinkLabel": { "type": "Text", "config": { "label": "Nav Linklabel", "placeholder": "" } }
           }
         }
       }

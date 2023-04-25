@@ -192,12 +192,12 @@ interface ContentPageDocumentData {
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: content-page.Description
+     * - **API ID Path**: content-page.description
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    Description: prismicT.KeyTextField;
+    description: prismicT.KeyTextField;
     /**
      * Image field in *Content Page*
      *
@@ -250,17 +250,6 @@ export type ContentPageDocument<Lang extends string = string> = prismicT.Prismic
 /** Content for Footer documents */
 interface FooterDocumentData {
     /**
-     * Logo field in *Footer*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: footer.logo
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    logo: prismicT.ImageField<never>;
-    /**
      * Copy Right field in *Footer*
      *
      * - **Field Type**: Text
@@ -272,28 +261,6 @@ interface FooterDocumentData {
      */
     copyRight: prismicT.KeyTextField;
     /**
-     * Content Col One field in *Footer*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: footer.contentColOne
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    contentColOne: prismicT.RichTextField;
-    /**
-     * Content Col Two field in *Footer*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: footer.contentColTwo
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    contentColTwo: prismicT.RichTextField;
-    /**
      * Nav Items field in *Footer*
      *
      * - **Field Type**: Group
@@ -304,17 +271,6 @@ interface FooterDocumentData {
      *
      */
     navItems: prismicT.GroupField<Simplify<FooterDocumentDataNavItemsItem>>;
-    /**
-     * Social Links field in *Footer*
-     *
-     * - **Field Type**: Group
-     * - **Placeholder**: *None*
-     * - **API ID Path**: footer.socialLinks[]
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/group
-     *
-     */
-    socialLinks: prismicT.GroupField<Simplify<FooterDocumentDataSocialLinksItem>>;
 }
 /**
  * Item in Footer → Nav Items
@@ -341,32 +297,6 @@ export interface FooterDocumentDataNavItemsItem {
      *
      */
     navLinkLabel: prismicT.KeyTextField;
-}
-/**
- * Item in Footer → Social Links
- *
- */
-export interface FooterDocumentDataSocialLinksItem {
-    /**
-     * Social Link field in *Footer → Social Links*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: footer.socialLinks[].socialLink
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    socialLink: prismicT.LinkField;
-    /**
-     * Social Link Label field in *Footer → Social Links*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: footer.socialLinks[].socialLinkLabel
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    socialLinkLabel: prismicT.KeyTextField;
 }
 /**
  * Footer document from Prismic
@@ -405,39 +335,6 @@ export type FormDocument<Lang extends string = string> = prismicT.PrismicDocumen
 /** Content for Header documents */
 interface HeaderDocumentData {
     /**
-     * Logo field in *Header*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: header.logo
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    logo: prismicT.ImageField<never>;
-    /**
-     * Burger Menu Items field in *Header*
-     *
-     * - **Field Type**: Group
-     * - **Placeholder**: *None*
-     * - **API ID Path**: header.burgerMenuItems[]
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/group
-     *
-     */
-    burgerMenuItems: prismicT.GroupField<Simplify<HeaderDocumentDataBurgerMenuItemsItem>>;
-    /**
-     * Social Links field in *Header*
-     *
-     * - **Field Type**: Group
-     * - **Placeholder**: *None*
-     * - **API ID Path**: header.socialLinks[]
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/group
-     *
-     */
-    socialLinks: prismicT.GroupField<Simplify<HeaderDocumentDataSocialLinksItem>>;
-    /**
      * Nav Items field in *Header*
      *
      * - **Field Type**: Group
@@ -448,58 +345,6 @@ interface HeaderDocumentData {
      *
      */
     NavItems: prismicT.GroupField<Simplify<HeaderDocumentDataNavItemsItem>>;
-}
-/**
- * Item in Header → Burger Menu Items
- *
- */
-export interface HeaderDocumentDataBurgerMenuItemsItem {
-    /**
-     * Burger Menu Link field in *Header → Burger Menu Items*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: header.burgerMenuItems[].burgerMenuLink
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    burgerMenuLink: prismicT.LinkField;
-    /**
-     * Burger Menulink Label field in *Header → Burger Menu Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: header.burgerMenuItems[].burgerMenulinkLabel
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    burgerMenulinkLabel: prismicT.KeyTextField;
-}
-/**
- * Item in Header → Social Links
- *
- */
-export interface HeaderDocumentDataSocialLinksItem {
-    /**
-     * Social Link field in *Header → Social Links*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: header.socialLinks[].socialLink
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    socialLink: prismicT.LinkField;
-    /**
-     * Social Link Label field in *Header → Social Links*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: header.socialLinks[].socialLinkLabel
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    socialLinkLabel: prismicT.KeyTextField;
 }
 /**
  * Item in Header → Nav Items
@@ -564,14 +409,14 @@ interface IndexDocumentData {
     /**
      * Image field in *Index*
      *
-     * - **Field Type**: Link to Media
+     * - **Field Type**: Image
      * - **Placeholder**: *None*
      * - **API ID Path**: index.image
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    image: prismicT.LinkToMediaField;
+    image: prismicT.ImageField<never>;
     /**
      * Image Alt field in *Index*
      *
@@ -637,14 +482,14 @@ interface NewsDetailDocumentData {
     /**
      * Image field in *News Detail*
      *
-     * - **Field Type**: Link to Media
+     * - **Field Type**: Image
      * - **Placeholder**: *None*
      * - **API ID Path**: news-detail.image
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    image: prismicT.LinkToMediaField;
+    image: prismicT.ImageField<never>;
     /**
      * Image Alt field in *News Detail*
      *
@@ -667,63 +512,63 @@ interface NewsDetailDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type NewsDetailDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NewsDetailDocumentData>, "news-detail", Lang>;
-/** Content for News Distribution documents */
-interface NewsDistributionDocumentData {
+/** Content for People documents */
+interface PeopleDocumentData {
     /**
-     * Title field in *News Distribution*
+     * Title field in *People*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: news-distribution.title
+     * - **API ID Path**: people.title
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
     title: prismicT.KeyTextField;
     /**
-     * Description field in *News Distribution*
+     * Description field in *People*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: news-distribution.description
+     * - **API ID Path**: people.description
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
     description: prismicT.KeyTextField;
     /**
-     * Image field in *News Distribution*
+     * Image field in *People*
      *
-     * - **Field Type**: Link to Media
+     * - **Field Type**: Image
      * - **Placeholder**: *None*
-     * - **API ID Path**: news-distribution.image
+     * - **API ID Path**: people.image
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    image: prismicT.LinkToMediaField;
+    image: prismicT.ImageField<never>;
     /**
-     * Image Alt field in *News Distribution*
+     * Image Alt field in *People*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: news-distribution.imageAlt
+     * - **API ID Path**: people.image_alt
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    imageAlt: prismicT.KeyTextField;
+    image_alt: prismicT.KeyTextField;
 }
 /**
- * News Distribution document from Prismic
+ * People document from Prismic
  *
- * - **API ID**: `news-distribution`
- * - **Repeatable**: `false`
+ * - **API ID**: `people`
+ * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type NewsDistributionDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NewsDistributionDocumentData>, "news-distribution", Lang>;
+export type PeopleDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PeopleDocumentData>, "people", Lang>;
 /** Content for Service Detail documents */
 interface ServiceDetailDocumentData {
     /**
@@ -751,14 +596,14 @@ interface ServiceDetailDocumentData {
     /**
      * Image field in *Service Detail*
      *
-     * - **Field Type**: Link to Media
+     * - **Field Type**: Image
      * - **Placeholder**: *None*
      * - **API ID Path**: service-detail.image
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    image: prismicT.LinkToMediaField;
+    image: prismicT.ImageField<never>;
     /**
      * Image Alt field in *Service Detail*
      *
@@ -770,6 +615,28 @@ interface ServiceDetailDocumentData {
      *
      */
     imageAlt: prismicT.KeyTextField;
+    /**
+     * Headline field in *Service Detail*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: service-detail.headline
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    headline: prismicT.KeyTextField;
+    /**
+     * Abstract field in *Service Detail*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: service-detail.abstract
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    abstract: prismicT.KeyTextField;
 }
 /**
  * Service Detail document from Prismic
@@ -805,64 +672,7 @@ interface ServiceFilterItemDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type ServiceFilterItemDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ServiceFilterItemDocumentData>, "service-filter-item", Lang>;
-/** Content for Services Distribution documents */
-interface ServicesDistributionDocumentData {
-    /**
-     * Title field in *Services Distribution*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: services-distribution.title
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    title: prismicT.KeyTextField;
-    /**
-     * Description field in *Services Distribution*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: services-distribution.description
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    description: prismicT.KeyTextField;
-    /**
-     * Image field in *Services Distribution*
-     *
-     * - **Field Type**: Link to Media
-     * - **Placeholder**: *None*
-     * - **API ID Path**: services-distribution.image
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    image: prismicT.LinkToMediaField;
-    /**
-     * Image Alt field in *Services Distribution*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: services-distribution.imageAlt
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    imageAlt: prismicT.KeyTextField;
-}
-/**
- * Services Distribution document from Prismic
- *
- * - **API ID**: `services-distribution`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type ServicesDistributionDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ServicesDistributionDocumentData>, "services-distribution", Lang>;
-export type AllDocumentTypes = CaseModalDocument | CasesDistributionDocument | ContentPageDocument | FooterDocument | FormDocument | HeaderDocument | IndexDocument | NewsDetailDocument | NewsDistributionDocument | ServiceDetailDocument | ServiceFilterItemDocument | ServicesDistributionDocument;
+export type AllDocumentTypes = CaseModalDocument | CasesDistributionDocument | ContentPageDocument | FooterDocument | FormDocument | HeaderDocument | IndexDocument | NewsDetailDocument | PeopleDocument | ServiceDetailDocument | ServiceFilterItemDocument;
 /**
  * Primary content in Card → Primary
  *
@@ -1815,6 +1625,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { CaseModalDocumentData, CaseModalDocumentDataServiceFilterItemItem, CaseModalDocumentDataCaseImageItem, CaseModalDocument, CasesDistributionDocumentData, CasesDistributionDocument, ContentPageDocumentData, ContentPageDocumentDataSlicesSlice, ContentPageDocument, FooterDocumentData, FooterDocumentDataNavItemsItem, FooterDocumentDataSocialLinksItem, FooterDocument, FormDocumentData, FormDocument, HeaderDocumentData, HeaderDocumentDataBurgerMenuItemsItem, HeaderDocumentDataSocialLinksItem, HeaderDocumentDataNavItemsItem, HeaderDocument, IndexDocumentData, IndexDocumentDataSlicesSlice, IndexDocument, NewsDetailDocumentData, NewsDetailDocument, NewsDistributionDocumentData, NewsDistributionDocument, ServiceDetailDocumentData, ServiceDetailDocument, ServiceFilterItemDocumentData, ServiceFilterItemDocument, ServicesDistributionDocumentData, ServicesDistributionDocument, AllDocumentTypes, CardSliceDefaultPrimary, CardSliceDefaultItem, CardSliceDefault, CardSliceItemAsLinkToServicesPrimary, CardSliceItemAsLinkToServicesItem, CardSliceItemAsLinkToServices, CardSliceIconPrimary, CardSliceIconItem, CardSliceIcon, CardSliceVariation, CardSlice, FormSliceDefaultPrimary, FormSliceDefault, FormSliceVariation, FormSlice, ImageSliceSliceDefaultPrimary, ImageSliceSliceDefaultItem, ImageSliceSliceDefault, ImageSliceSliceVariation, ImageSliceSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefault, InfoboxSliceSocialMediaPrimary, InfoboxSliceSocialMedia, InfoboxSliceVariation, InfoboxSlice, PartnerSliceDefaultPrimary, PartnerSliceDefaultItem, PartnerSliceDefault, PartnerSliceVariation, PartnerSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, StageSliceDefaultPrimary, StageSliceDefault, StageSliceVariation, StageSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TextImageSliceDefaultPrimary, TextImageSliceDefault, TextImageSliceItemAsLinkToServicesPrimary, TextImageSliceItemAsLinkToServicesItem, TextImageSliceItemAsLinkToServices, TextImageSliceVariation, TextImageSlice, VideoSliceDefaultPrimary, VideoSliceDefault, VideoSliceYoutubeLinkPrimary, VideoSliceYoutubeLink, VideoSliceVariation, VideoSlice };
+        export type { CaseModalDocumentData, CaseModalDocumentDataServiceFilterItemItem, CaseModalDocumentDataCaseImageItem, CaseModalDocument, CasesDistributionDocumentData, CasesDistributionDocument, ContentPageDocumentData, ContentPageDocumentDataSlicesSlice, ContentPageDocument, FooterDocumentData, FooterDocumentDataNavItemsItem, FooterDocument, FormDocumentData, FormDocument, HeaderDocumentData, HeaderDocumentDataNavItemsItem, HeaderDocument, IndexDocumentData, IndexDocumentDataSlicesSlice, IndexDocument, NewsDetailDocumentData, NewsDetailDocument, PeopleDocumentData, PeopleDocument, ServiceDetailDocumentData, ServiceDetailDocument, ServiceFilterItemDocumentData, ServiceFilterItemDocument, AllDocumentTypes, CardSliceDefaultPrimary, CardSliceDefaultItem, CardSliceDefault, CardSliceItemAsLinkToServicesPrimary, CardSliceItemAsLinkToServicesItem, CardSliceItemAsLinkToServices, CardSliceIconPrimary, CardSliceIconItem, CardSliceIcon, CardSliceVariation, CardSlice, FormSliceDefaultPrimary, FormSliceDefault, FormSliceVariation, FormSlice, ImageSliceSliceDefaultPrimary, ImageSliceSliceDefaultItem, ImageSliceSliceDefault, ImageSliceSliceVariation, ImageSliceSlice, InfoboxSliceDefaultPrimary, InfoboxSliceDefault, InfoboxSliceSocialMediaPrimary, InfoboxSliceSocialMedia, InfoboxSliceVariation, InfoboxSlice, PartnerSliceDefaultPrimary, PartnerSliceDefaultItem, PartnerSliceDefault, PartnerSliceVariation, PartnerSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, StageSliceDefaultPrimary, StageSliceDefault, StageSliceVariation, StageSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TextImageSliceDefaultPrimary, TextImageSliceDefault, TextImageSliceItemAsLinkToServicesPrimary, TextImageSliceItemAsLinkToServicesItem, TextImageSliceItemAsLinkToServices, TextImageSliceVariation, TextImageSlice, VideoSliceDefaultPrimary, VideoSliceDefault, VideoSliceYoutubeLinkPrimary, VideoSliceYoutubeLink, VideoSliceVariation, VideoSlice };
     }
 }

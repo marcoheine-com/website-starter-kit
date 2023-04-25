@@ -11,13 +11,7 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Quote",
       "primary": {
-        "quote": {
-          "type": "Text",
-          "config": {
-            "label": "Quote",
-            "placeholder": ""
-          }
-        },
+        "quote": { "type": "Text", "config": { "label": "Quote", "placeholder": "" } },
         "details": {
           "type": "StructuredText",
           "config": {

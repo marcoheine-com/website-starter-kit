@@ -13,22 +13,11 @@
       "primary": {
         "layout": {
           "type": "Select",
-          "config": {
-            "label": "Layout",
-            "placeholder": "",
-            "options": ["single", "gallery"]
-          }
+          "config": { "label": "Layout", "placeholder": "", "options": ["single", "gallery"] }
         }
       },
       "items": {
-        "asset": {
-          "type": "Image",
-          "config": {
-            "label": "Asset",
-            "constraint": {},
-            "thumbnails": []
-          }
-        }
+        "asset": { "type": "Image", "config": { "label": "Asset", "constraint": {}, "thumbnails": [] } }
       },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }

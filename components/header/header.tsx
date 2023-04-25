@@ -1,6 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import { linkResolver } from '../../prismicio'
 import * as React from 'react'
 import { SVGIcon } from '../svg-icon'
 import { useOnClickOutside } from '../../utils/custom-hooks'
@@ -10,6 +8,7 @@ import {
   HeaderDocumentDataNavItemsItem,
   HeaderDocumentDataSocialLinksItem,
 } from '@/types.generated'
+import { PrismicLink } from '@prismicio/react'
 
 export const Header: React.FC<HeaderDocument> = ({ data }) => {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -48,9 +47,9 @@ export const Header: React.FC<HeaderDocument> = ({ data }) => {
           <span className="mb-6 block text-black-48">Menu</span>
           {burgerMenuItems?.map((burgerMenuItem: HeaderDocumentDataBurgerMenuItemsItem, index: number) => (
             <li key={burgerMenuItem.burgerMenulinkLabel || index} className="mb-6 last-of-type:mb-12">
-              <Link href={linkResolver(burgerMenuItem.burgerMenuLink)}>
+              <PrismicLink field={burgerMenuItem.burgerMenuLink}>
                 <a>{burgerMenuItem.burgerMenulinkLabel}</a>
-              </Link>
+              </PrismicLink>
             </li>
           ))}
 
@@ -58,9 +57,9 @@ export const Header: React.FC<HeaderDocument> = ({ data }) => {
           <ul>
             {socialLinks?.map((socialLink: HeaderDocumentDataSocialLinksItem, index: number) => (
               <li key={socialLink.socialLinkLabel || index} className="mb-6 last:mb-0">
-                <Link href={linkResolver(socialLink.socialLink)}>
+                <PrismicLink field={socialLink.socialLink}>
                   <a className="flex gap-4">{socialLink.socialLinkLabel}</a>
-                </Link>
+                </PrismicLink>
               </li>
             ))}
           </ul>
@@ -79,9 +78,9 @@ export const Header: React.FC<HeaderDocument> = ({ data }) => {
         <ul>
           {NavItems?.map((navItem: HeaderDocumentDataNavItemsItem, index: number) => (
             <li key={navItem.navLinkLabel || index}>
-              <Link href={linkResolver(navItem.navLink)}>
+              <PrismicLink field={navItem.navLink}>
                 <a>{navItem.navLinkLabel}</a>
-              </Link>
+              </PrismicLink>
             </li>
           ))}
         </ul>

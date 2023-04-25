@@ -5,60 +5,6 @@
   "status": true,
   "json": {
     "Main": {
-      "logo": {
-        "type": "Image",
-        "config": {
-          "label": "Logo",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "burgerMenuItems": {
-        "type": "Group",
-        "config": {
-          "label": "Burger Menu Items",
-          "fields": {
-            "burgerMenuLink": {
-              "type": "Link",
-              "config": {
-                "label": "Burger Menu Link",
-                "placeholder": "",
-                "select": null
-              }
-            },
-            "burgerMenulinkLabel": {
-              "type": "Text",
-              "config": {
-                "label": "Burger Menulink Label",
-                "placeholder": ""
-              }
-            }
-          }
-        }
-      },
-      "socialLinks": {
-        "type": "Group",
-        "config": {
-          "label": "Social Links",
-          "fields": {
-            "socialLink": {
-              "type": "Link",
-              "config": {
-                "label": "Social Link",
-                "placeholder": "",
-                "select": null
-              }
-            },
-            "socialLinkLabel": {
-              "type": "Text",
-              "config": {
-                "label": "Social Link Label",
-                "placeholder": ""
-              }
-            }
-          }
-        }
-      },
       "NavItems": {
         "type": "Group",
         "config": {
@@ -66,19 +12,9 @@
           "fields": {
             "navLink": {
               "type": "Link",
-              "config": {
-                "label": "Nav Link",
-                "placeholder": "",
-                "select": null
-              }
+              "config": { "label": "Nav Link", "placeholder": "", "select": null }
             },
-            "navLinkLabel": {
-              "type": "Text",
-              "config": {
-                "label": "Nav Link Label",
-                "placeholder": ""
-              }
-            }
+            "navLinkLabel": { "type": "Text", "config": { "label": "Nav Link Label", "placeholder": "" } }
           }
         }
       }

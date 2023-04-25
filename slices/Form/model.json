@@ -22,13 +22,7 @@
         },
         "linkToForm": {
           "type": "Link",
-          "config": {
-            "label": "Link To Form",
-            "select": "document",
-            "customtypes": [
-              "form"
-            ]
-          }
+          "config": { "label": "Link To Form", "select": "document", "customtypes": ["form"] }
         }
       },
       "items": {},
