@@ -1,0 +1,109 @@
+[
+  {
+    "logo": {
+      "__TYPE__": "ImageContent",
+      "origin": {
+        "id": "main",
+        "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+        "width": 4380,
+        "height": 2895
+      },
+      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+      "width": 4380,
+      "height": 2895,
+      "edit": {
+        "zoom": 1,
+        "crop": {
+          "x": 0,
+          "y": 0
+        },
+        "background": "transparent"
+      },
+      "thumbnails": {}
+    },
+    "burgerMenuItems": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "burgerMenuLink",
+              {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "https://slicemachine.dev"
+                }
+              }
+            ],
+            [
+              "burgerMenulinkLabel",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "buy",
+                "type": "Text"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "socialLinks": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "socialLink",
+              {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "https://prismic.io"
+                }
+              }
+            ],
+            [
+              "socialLinkLabel",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "bank",
+                "type": "Text"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "NavItems": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "navLink",
+              {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "http://twitter.com"
+                }
+              }
+            ],
+            [
+              "navLinkLabel",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "after",
+                "type": "Text"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  }
+]

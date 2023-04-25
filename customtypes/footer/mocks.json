@@ -1,0 +1,108 @@
+[
+  {
+    "logo": {
+      "__TYPE__": "ImageContent",
+      "origin": {
+        "id": "main",
+        "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
+        "width": 4000,
+        "height": 4000
+      },
+      "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
+      "width": 4000,
+      "height": 4000,
+      "edit": {
+        "zoom": 1,
+        "crop": {
+          "x": 0,
+          "y": 0
+        },
+        "background": "transparent"
+      },
+      "thumbnails": {}
+    },
+    "copyRight": {
+      "__TYPE__": "FieldContent",
+      "value": "zulu",
+      "type": "Text"
+    },
+    "contentColOne": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Nisi sunt nulla est velit. Ipsum esse mollit aliqua cupidatat magna mollit qui duis tempor velit nostrud minim pariatur occaecat quis. Duis irure et enim esse reprehenderit aliqua ea enim duis ipsum laborum ipsum."
+          }
+        }
+      ]
+    },
+    "contentColTwo": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Dolor duis eu tempor aute ut nulla cupidatat adipisicing non minim culpa cupidatat et non. Non nulla deserunt nisi aute amet pariatur cupidatat do eiusmod sunt."
+          }
+        }
+      ]
+    },
+    "navItems": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "navLink",
+              {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "http://google.com"
+                }
+              }
+            ],
+            [
+              "navLinkLabel",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "stood",
+                "type": "Text"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "socialLinks": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "socialLink",
+              {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "http://google.com"
+                }
+              }
+            ],
+            [
+              "socialLinkLabel",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "sold",
+                "type": "Text"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  }
+]
