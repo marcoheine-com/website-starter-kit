@@ -1,13 +1,7 @@
-import Image from 'next/image'
 import * as React from 'react'
 import { SVGIcon } from '../svg-icon'
 import { useOnClickOutside } from '../../utils/custom-hooks'
-import {
-  HeaderDocument,
-  HeaderDocumentDataBurgerMenuItemsItem,
-  HeaderDocumentDataNavItemsItem,
-  HeaderDocumentDataSocialLinksItem,
-} from '@/types.generated'
+import { HeaderDocument, HeaderDocumentDataNavItemsItem } from '@/types.generated'
 import { PrismicLink } from '@prismicio/react'
 
 export const Header: React.FC<HeaderDocument> = ({ data }) => {
@@ -23,7 +17,7 @@ export const Header: React.FC<HeaderDocument> = ({ data }) => {
     return null
   }
 
-  const { burgerMenuItems, logo, NavItems, socialLinks } = data
+  const { navItems } = data
 
   return (
     <header className="container-wrapper-xl relative flex w-full max-w-container-full items-center justify-between py-4">
@@ -45,42 +39,19 @@ export const Header: React.FC<HeaderDocument> = ({ data }) => {
           ref={ref}
         >
           <span className="mb-6 block text-black-48">Menu</span>
-          {burgerMenuItems?.map((burgerMenuItem: HeaderDocumentDataBurgerMenuItemsItem, index: number) => (
-            <li key={burgerMenuItem.burgerMenulinkLabel || index} className="mb-6 last-of-type:mb-12">
-              <PrismicLink field={burgerMenuItem.burgerMenuLink}>
-                <a>{burgerMenuItem.burgerMenulinkLabel}</a>
-              </PrismicLink>
+          {navItems?.map((navItem: HeaderDocumentDataNavItemsItem, index: number) => (
+            <li key={navItem.navLinkLabel || index} className="mb-6 last-of-type:mb-12">
+              <PrismicLink field={navItem.navLink}>{navItem.navLinkLabel}</PrismicLink>
             </li>
           ))}
-
-          <span className="mb-6 block text-black-48">Folgen Sie uns auf</span>
-          <ul>
-            {socialLinks?.map((socialLink: HeaderDocumentDataSocialLinksItem, index: number) => (
-              <li key={socialLink.socialLinkLabel || index} className="mb-6 last:mb-0">
-                <PrismicLink field={socialLink.socialLink}>
-                  <a className="flex gap-4">{socialLink.socialLinkLabel}</a>
-                </PrismicLink>
-              </li>
-            ))}
-          </ul>
         </ul>
       </nav>
-      {logo.url ? (
-        <Image
-          src={logo.url}
-          alt={logo.alt || ''}
-          width={logo.dimensions.width}
-          height={logo.dimensions.height}
-        />
-      ) : null}
 
-      {NavItems?.length > 0 && (
+      {navItems?.length > 0 && (
         <ul>
-          {NavItems?.map((navItem: HeaderDocumentDataNavItemsItem, index: number) => (
+          {navItems?.map((navItem: HeaderDocumentDataNavItemsItem, index: number) => (
             <li key={navItem.navLinkLabel || index}>
-              <PrismicLink field={navItem.navLink}>
-                <a>{navItem.navLinkLabel}</a>
-              </PrismicLink>
+              <PrismicLink field={navItem.navLink}>{navItem.navLinkLabel}</PrismicLink>
             </li>
           ))}
         </ul>

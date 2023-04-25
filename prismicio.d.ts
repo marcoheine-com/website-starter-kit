@@ -6,182 +6,6 @@ import type * as prismic from '@prismicio/client'
 type Simplify<T> = {
   [KeyType in keyof T]: T[KeyType]
 }
-/** Content for Case Modal documents */
-interface CaseModalDocumentData {
-  /**
-   * Image field in *Case Modal*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case-modal.image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/image
-   *
-   */
-  image: prismicT.ImageField<never>
-  /**
-   * Thumbnail Ratio field in *Case Modal*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case-modal.thumbnailRatio
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
-   *
-   */
-  thumbnailRatio: prismicT.SelectField<'4:3' | '1:1' | '3:4'>
-  /**
-   * Title field in *Case Modal*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case-modal.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  title: prismicT.KeyTextField
-  /**
-   * Content field in *Case Modal*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case-modal.content
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  content: prismicT.RichTextField
-  /**
-   * Service Filter Item field in *Case Modal*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case-modal.serviceFilterItem[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/group
-   *
-   */
-  serviceFilterItem: prismicT.GroupField<Simplify<CaseModalDocumentDataServiceFilterItemItem>>
-  /**
-   * Case Image field in *Case Modal*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case-modal.caseImage[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/group
-   *
-   */
-  caseImage: prismicT.GroupField<Simplify<CaseModalDocumentDataCaseImageItem>>
-}
-/**
- * Item in Case Modal → Service Filter Item
- *
- */
-export interface CaseModalDocumentDataServiceFilterItemItem {
-  /**
-   * Service Filter field in *Case Modal → Service Filter Item*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case-modal.serviceFilterItem[].serviceFilter
-   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-   *
-   */
-  serviceFilter: prismicT.RelationField<'service-filter-item'>
-}
-/**
- * Item in Case Modal → Case Image
- *
- */
-export interface CaseModalDocumentDataCaseImageItem {
-  /**
-   * Image field in *Case Modal → Case Image*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case-modal.caseImage[].image
-   * - **Documentation**: https://prismic.io/docs/core-concepts/image
-   *
-   */
-  image: prismicT.ImageField<never>
-}
-/**
- * Case Modal document from Prismic
- *
- * - **API ID**: `case-modal`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type CaseModalDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<
-  Simplify<CaseModalDocumentData>,
-  'case-modal',
-  Lang
->
-/** Content for Cases Distribution documents */
-interface CasesDistributionDocumentData {
-  /**
-   * Title field in *Cases Distribution*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: cases-distribution.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  title: prismicT.KeyTextField
-  /**
-   * Description field in *Cases Distribution*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: cases-distribution.description
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  description: prismicT.KeyTextField
-  /**
-   * Image field in *Cases Distribution*
-   *
-   * - **Field Type**: Link to Media
-   * - **Placeholder**: *None*
-   * - **API ID Path**: cases-distribution.image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-   *
-   */
-  image: prismicT.LinkToMediaField
-  /**
-   * Image Alt field in *Cases Distribution*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: cases-distribution.imageAlt
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  imageAlt: prismicT.KeyTextField
-}
-/**
- * Cases Distribution document from Prismic
- *
- * - **API ID**: `cases-distribution`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type CasesDistributionDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<
-  Simplify<CasesDistributionDocumentData>,
-  'cases-distribution',
-  Lang
->
 /** Content for Content Page documents */
 interface ContentPageDocumentData {
   /**
@@ -209,14 +33,14 @@ interface ContentPageDocumentData {
   /**
    * Image field in *Content Page*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Image
    * - **Placeholder**: *None*
    * - **API ID Path**: content-page.image
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
    *
    */
-  image: prismicT.LinkToMediaField
+  image: prismicT.ImageField<never>
   /**
    * Image Alt field in *Content Page*
    *
@@ -369,12 +193,12 @@ interface HeaderDocumentData {
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: header.NavItems[]
+   * - **API ID Path**: header.navItems[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/group
    *
    */
-  NavItems: prismicT.GroupField<Simplify<HeaderDocumentDataNavItemsItem>>
+  navItems: prismicT.GroupField<Simplify<HeaderDocumentDataNavItemsItem>>
 }
 /**
  * Item in Header → Nav Items
@@ -386,7 +210,7 @@ export interface HeaderDocumentDataNavItemsItem {
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: header.NavItems[].navLink
+   * - **API ID Path**: header.navItems[].navLink
    * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
    *
    */
@@ -396,7 +220,7 @@ export interface HeaderDocumentDataNavItemsItem {
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: header.NavItems[].navLinkLabel
+   * - **API ID Path**: header.navItems[].navLinkLabel
    * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
    *
    */
@@ -610,6 +434,65 @@ interface PeopleDocumentData {
    *
    */
   image_alt: prismicT.KeyTextField
+  /**
+   * Name field in *People*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name: prismicT.KeyTextField
+  /**
+   * Position field in *People*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.position
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  position: prismicT.KeyTextField
+  /**
+   * Social Links field in *People*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.social_links[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  social_links: prismicT.GroupField<Simplify<PeopleDocumentDataSocialLinksItem>>
+}
+/**
+ * Item in People → Social Links
+ *
+ */
+export interface PeopleDocumentDataSocialLinksItem {
+  /**
+   * Link field in *People → Social Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.social_links[].link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  link: prismicT.LinkField
+  /**
+   * Icon field in *People → Social Links*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.social_links[].icon
+   * - **Documentation**: https://prismic.io/docs/core-concepts/select
+   *
+   */
+  icon: prismicT.SelectField<'Facebook' | 'LinkedIn' | 'Xing' | 'Twitter' | 'Instagram' | 'Tiktok'>
 }
 /**
  * People document from Prismic
@@ -737,8 +620,6 @@ export type ServiceFilterItemDocument<Lang extends string = string> = prismicT.P
   Lang
 >
 export type AllDocumentTypes =
-  | CaseModalDocument
-  | CasesDistributionDocument
   | ContentPageDocument
   | FooterDocument
   | FormDocument
@@ -1761,12 +1642,6 @@ declare module '@prismicio/client' {
   }
   namespace Content {
     export type {
-      CaseModalDocumentData,
-      CaseModalDocumentDataServiceFilterItemItem,
-      CaseModalDocumentDataCaseImageItem,
-      CaseModalDocument,
-      CasesDistributionDocumentData,
-      CasesDistributionDocument,
       ContentPageDocumentData,
       ContentPageDocumentDataSlicesSlice,
       ContentPageDocument,
@@ -1784,6 +1659,7 @@ declare module '@prismicio/client' {
       NewsDetailDocumentData,
       NewsDetailDocument,
       PeopleDocumentData,
+      PeopleDocumentDataSocialLinksItem,
       PeopleDocument,
       ServiceDetailDocumentData,
       ServiceDetailDocument,

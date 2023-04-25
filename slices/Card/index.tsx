@@ -1,7 +1,6 @@
-import { linkResolver } from '@/prismicio'
 import { CardSlice, CardSliceIconItem } from '@/types.generated'
 import { filledLinkTypeGuard } from '@/utils/type-guards/isFilledLink'
-import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
+import { PrismicLink, PrismicRichText, SliceComponentProps } from '@prismicio/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -20,7 +19,7 @@ const Card: React.FC<SliceComponentProps<CardSlice>> = ({ slice }) => {
       <section>
         <PrismicRichText field={slice.primary.content} />
         {slice.items?.map((item: CardSliceIconItem, index: number) => {
-          const isFilledLink = filledLinkTypeGuard(item.link) ? item : null
+          const isFilledLink = filledLinkTypeGuard(item.link) ? item.link : null
           return (
             <div key={index}>
               {item.asset.url ? (
@@ -34,11 +33,7 @@ const Card: React.FC<SliceComponentProps<CardSlice>> = ({ slice }) => {
 
               <PrismicRichText field={item.content} />
 
-              {isFilledLink && (
-                <Link href={linkResolver(isFilledLink)}>
-                  <a>{isFilledLink.linkLabel}</a>
-                </Link>
-              )}
+              {isFilledLink && <PrismicLink field={isFilledLink}>{item.linkLabel}</PrismicLink>}
             </div>
           )
         })}

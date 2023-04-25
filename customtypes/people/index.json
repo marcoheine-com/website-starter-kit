@@ -9,7 +9,26 @@
       "title": { "type": "Text", "config": { "label": "Title", "placeholder": "" } },
       "description": { "type": "Text", "config": { "label": "Description", "placeholder": "" } },
       "image": { "type": "Image", "config": { "label": "Image", "constraint": {}, "thumbnails": [] } },
-      "image_alt": { "type": "Text", "config": { "label": "Image Alt", "placeholder": "" } }
+      "image_alt": { "type": "Text", "config": { "label": "Image Alt", "placeholder": "" } },
+      "name": { "type": "Text", "config": { "label": "Name", "placeholder": "" } },
+      "position": { "type": "Text", "config": { "label": "Position", "placeholder": "" } },
+      "social_links": {
+        "type": "Group",
+        "config": {
+          "label": "Social Links",
+          "fields": {
+            "link": { "type": "Link", "config": { "label": "Link", "placeholder": "", "select": null } },
+            "icon": {
+              "type": "Select",
+              "config": {
+                "label": "Icon",
+                "placeholder": "",
+                "options": ["Facebook", "LinkedIn", "Xing", "Twitter", "Instagram", "Tiktok"]
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

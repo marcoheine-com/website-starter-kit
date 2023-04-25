@@ -6,7 +6,7 @@ import * as prismicT from '@prismicio/types'
 interface Props {
   title: string | null
   description: string | null
-  image?: prismicT.LinkToMediaField
+  image?: prismicT.ImageField
   imageAlt?: prismicT.KeyTextField
   favicon?: string
 }
@@ -21,8 +21,8 @@ export const HeadComponent: React.FC<Props> = ({
   const router = useRouter()
   const canonical = `${router.pathname}${router.asPath}`
 
-  const imageTypeGuard = (image: prismicT.LinkToMediaField): image is prismicT.FilledLinkToMediaField => {
-    return (image as prismicT.FilledLinkToMediaField) !== null
+  const imageTypeGuard = (image: prismicT.ImageField): image is prismicT.FilledImageFieldImage => {
+    return image?.url !== undefined
   }
 
   const imageUrl = image && imageTypeGuard(image) ? image?.url : ''

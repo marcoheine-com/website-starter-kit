@@ -27,7 +27,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params, previewData }) => {
-  const client = createClient(previewData)
+  const client = createClient({ previewData })
 
   let doc = null
   let errorCode = null
@@ -68,7 +68,7 @@ const ContentPage: NextPage<PageProps> = ({ doc, header, footer, errorCode }) =>
     <div className="page-container">
       <HeadComponent
         title={doc?.data?.title}
-        description={doc?.data?.Description}
+        description={doc?.data?.description}
         image={doc?.data?.image}
         imageAlt={doc?.data?.imageAlt}
       />

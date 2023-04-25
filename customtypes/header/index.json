@@ -5,7 +5,7 @@
   "status": true,
   "json": {
     "Main": {
-      "NavItems": {
+      "navItems": {
         "type": "Group",
         "config": {
           "label": "Nav Items",

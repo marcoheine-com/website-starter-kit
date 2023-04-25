@@ -27,7 +27,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params, previewData }) => {
-  const client = createClient(previewData)
+  const client = createClient({ previewData })
 
   let doc = null
   let errorCode = null

@@ -201,14 +201,14 @@ interface ContentPageDocumentData {
     /**
      * Image field in *Content Page*
      *
-     * - **Field Type**: Link to Media
+     * - **Field Type**: Image
      * - **Placeholder**: *None*
      * - **API ID Path**: content-page.image
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    image: prismicT.LinkToMediaField;
+    image: prismicT.ImageField<never>;
     /**
      * Image Alt field in *Content Page*
      *
@@ -339,12 +339,12 @@ interface HeaderDocumentData {
      *
      * - **Field Type**: Group
      * - **Placeholder**: *None*
-     * - **API ID Path**: header.NavItems[]
+     * - **API ID Path**: header.navItems[]
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/group
      *
      */
-    NavItems: prismicT.GroupField<Simplify<HeaderDocumentDataNavItemsItem>>;
+    navItems: prismicT.GroupField<Simplify<HeaderDocumentDataNavItemsItem>>;
 }
 /**
  * Item in Header → Nav Items
@@ -356,7 +356,7 @@ export interface HeaderDocumentDataNavItemsItem {
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: header.NavItems[].navLink
+     * - **API ID Path**: header.navItems[].navLink
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
@@ -366,7 +366,7 @@ export interface HeaderDocumentDataNavItemsItem {
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: header.NavItems[].navLinkLabel
+     * - **API ID Path**: header.navItems[].navLinkLabel
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
