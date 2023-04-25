@@ -6,6 +6,7 @@ import { Header } from '../../components/header'
 import { Footer } from '../../components/footer'
 import { HeadComponent } from '../../components/head/head'
 import { FooterDocument, HeaderDocument, ServiceDetailDocument } from '@/types.generated'
+import { FourOhFour } from '@/components/four-oh-four'
 
 export async function getStaticPaths() {
   const client = createClient()
@@ -28,8 +29,17 @@ export async function getStaticPaths() {
 export const getStaticProps: GetStaticProps = async ({ params, previewData }) => {
   const client = createClient(previewData)
 
-  // @ts-ignore
-  const doc = (await client.getByUID('service-detail', params?.uid, {})) || null
+  let doc = null
+  let errorCode = null
+
+  try {
+    // @ts-ignore
+    doc = (await client.getByUID('service-detail', params?.uid, {})) || null
+  } catch (error) {
+    console.error(error)
+    errorCode = '404'
+  }
+
   const header = (await client.getSingle('header', {})) || null
   const footer = (await client.getSingle('footer', {})) || null
 
@@ -38,6 +48,7 @@ export const getStaticProps: GetStaticProps = async ({ params, previewData }) =>
       doc,
       header,
       footer,
+      errorCode,
     },
   }
 }
@@ -46,9 +57,13 @@ interface PageProps {
   doc: ServiceDetailDocument
   header: HeaderDocument
   footer: FooterDocument
+  errorCode?: null | '404'
 }
 
-const ServiceDetail: NextPage<PageProps> = ({ doc, header, footer }) => {
+const ServiceDetail: NextPage<PageProps> = ({ doc, header, footer, errorCode }) => {
+  if (errorCode) {
+    return <FourOhFour header={header} footer={footer} />
+  }
   return (
     <div className="page-container">
       <HeadComponent
